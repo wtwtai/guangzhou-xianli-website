@@ -1,0 +1,180 @@
+import type { Metadata } from "next";
+
+export const siteConfig = {
+  name: "仙麗科技",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.xianli-paper.com",
+  slogan: "让专业纸品，更标准、更稳定、更容易流通。",
+  positioning: "专业纸业供应链服务商",
+  description:
+    "仙麗科技是一家专注专业纸品供应链服务的企业，以摄影背景纸为核心优势品类，连接优质纸品资源、智能化加工能力与全国渠道市场。",
+  contact: {
+    phone: "请后期填写",
+    wechat: "请后期填写",
+    email: "请后期填写",
+    address: "请后期填写",
+    hours: "周一至周六 9:00-18:00",
+  },
+  productLines: ["摄影背景纸", "彩卡卡纸", "包装纸", "文具用品纸"],
+  routes: [
+    {
+      path: "/",
+      label: "首页",
+      title: "仙麗科技｜专业纸业供应链服务商｜摄影背景纸与纸品批发合作",
+      description:
+        "仙麗科技专注摄影背景纸标准化、多品类纸品批发与全国渠道合作，提供背景纸、彩卡卡纸、包装纸、文具用品纸等纸品供应链解决方案。",
+      priority: 1,
+    },
+    {
+      path: "/about",
+      label: "关于仙麗",
+      title: "关于仙麗｜专业纸业供应链服务商",
+      description:
+        "了解仙麗科技的纸品供应链能力、服务客户、智能化加工、标准化品控与渠道合作方向。",
+      priority: 0.8,
+    },
+    {
+      path: "/backdrop-paper",
+      label: "专业背景纸",
+      title: "专业背景纸｜摄影背景纸批发与渠道合作",
+      description:
+        "仙麗科技提供摄影背景纸标准化产品方案，服务摄影棚、电商拍摄、内容创作与渠道批发客户。",
+      priority: 0.9,
+    },
+    {
+      path: "/products",
+      label: "产品中心",
+      title: "产品中心｜背景纸、彩卡卡纸、包装纸、文具用品纸",
+      description:
+        "仙麗科技产品中心覆盖摄影背景纸、彩卡卡纸、包装纸、文具用品纸等多品类纸品供应。",
+      priority: 0.9,
+    },
+    {
+      path: "/quality-standards",
+      label: "标准与品控",
+      title: "标准与品控｜背景纸标准化品控体系",
+      description:
+        "仙麗科技建立背景纸规格、外观、颜色、包装、抽检与追溯标准，帮助渠道客户降低采购风险。",
+      priority: 0.85,
+    },
+    {
+      path: "/smart-rd",
+      label: "智能研发",
+      title: "智能设备与研发｜背景纸智能化加工能力",
+      description:
+        "了解仙麗科技在背景纸加工设备、卷装、包装与批量交付流程方面的研发与优化能力。",
+      priority: 0.8,
+    },
+    {
+      path: "/certifications",
+      label: "环保认证",
+      title: "环保认证｜纸品环保认证与检测资料",
+      description:
+        "仙麗科技持续完善纸品环保检测、认证资料与可持续供应管理，为客户提供更可靠的采购依据。",
+      priority: 0.75,
+    },
+    {
+      path: "/channel-partners",
+      label: "渠道合作",
+      title: "渠道合作｜全国纸品渠道招商",
+      description:
+        "仙麗科技面向全国经销商、批发商、摄影器材渠道、文具渠道与电商卖家招募纸品合作伙伴。",
+      priority: 0.95,
+    },
+    {
+      path: "/resources",
+      label: "资料中心",
+      title: "资料中心｜产品目录、规格表与认证资料",
+      description:
+        "获取仙麗科技公司介绍、产品目录、背景纸规格表、色卡、渠道合作说明与环保认证资料。",
+      priority: 0.7,
+    },
+    {
+      path: "/expo",
+      label: "展会专页",
+      title: "展会专用页｜欢迎了解仙麗科技纸品解决方案",
+      description:
+        "展会客户快速了解仙麗科技专业背景纸、多品类纸品批发、标准化品控与渠道合作支持。",
+      priority: 0.7,
+    },
+    {
+      path: "/contact",
+      label: "联系我们",
+      title: "联系我们｜仙麗科技",
+      description:
+        "欢迎渠道商、批发商、品牌客户与展会采购客户联系仙麗科技，获取产品目录、样品、报价与合作政策。",
+      priority: 0.8,
+    },
+  ],
+};
+
+export const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  description: siteConfig.description,
+  areaServed: "CN",
+  knowsAbout: [
+    "摄影背景纸",
+    "纸品供应链",
+    "纸品批发",
+    "标准化品控",
+    "环保认证",
+  ],
+};
+
+export function absoluteUrl(path: string) {
+  return new URL(path, siteConfig.url).toString();
+}
+
+export function createPageMetadata({
+  title,
+  description,
+  path,
+}: {
+  title: string;
+  description: string;
+  path: string;
+}): Metadata {
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: path,
+      languages: {
+        "zh-CN": path,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: absoluteUrl(path),
+      siteName: siteConfig.name,
+      locale: "zh_CN",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
+
+export function metadataFor(path: string): Metadata {
+  const route = siteConfig.routes.find((item) => item.path === path);
+
+  if (!route) {
+    return createPageMetadata({
+      title: siteConfig.name,
+      description: siteConfig.description,
+      path,
+    });
+  }
+
+  return createPageMetadata({
+    title: route.title,
+    description: route.description,
+    path: route.path,
+  });
+}
