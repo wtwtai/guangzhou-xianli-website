@@ -54,8 +54,8 @@ export default function QualityStandardsPage() {
     <>
       <PageHero
         eyebrow="Quality Standards"
-        title="仙麗背景纸标准化品控体系"
-        description="让背景纸采购从经验判断，走向清晰、可检查、可追溯的标准化流程。"
+        title="仙麗彩卡特种纸标准化品控体系"
+        description="让彩卡特种纸采购从经验判断，走向清晰、可检查、可追溯的标准化流程。"
       >
         <ImagePlaceholder label="后期替换：标准与品控流程图片" kind="standard" />
       </PageHero>
@@ -66,10 +66,10 @@ export default function QualityStandardsPage() {
             <SectionHeader
               eyebrow="Why Standards"
               title="为什么要公开标准"
-              description="背景纸看似简单，但在实际使用中会受到颜色、平整度、表面反光、端面破损、运输压痕、包装保护等因素影响。"
+              description="彩卡特种纸看似简单，但在实际应用中会受到颜色、纹理、触感、加工精度、运输压痕、包装保护等因素影响。"
             />
             <div className="rounded-lg border border-slate-200 bg-white p-6 text-base leading-8 text-slate-700 subtle-shadow">
-              仙麗科技通过标准化品控流程，帮助渠道客户降低采购风险，提高产品销售稳定性。清晰的品控标准也便于客户培训销售团队、处理售后问题和管理长期供货。
+              仙麗科技围绕使用场景、用户需求，从原料到成品全流程管控，帮助渠道客户降低采购风险，提高产品销售稳定性。清晰的品控标准也便于客户培训销售团队、处理售后问题和管理长期供货。
             </div>
           </div>
         </Container>
@@ -108,7 +108,7 @@ export default function QualityStandardsPage() {
 
       <CTASection
         title="需要获取品控标准资料？"
-        description="我们可以提供背景纸规格、外观、包装、抽检与追溯相关资料，帮助渠道客户建立更清晰的采购依据。"
+        description="我们可以提供彩卡特种纸规格、外观、包装、抽检与追溯相关资料，帮助渠道客户建立更清晰的采购依据。"
         primaryLabel="获取品控标准资料"
         primaryHref="/contact"
       />

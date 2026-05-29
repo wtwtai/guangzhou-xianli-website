@@ -28,7 +28,7 @@ export function Header() {
             </span>
             <span className="hidden h-5 w-px bg-[#D6B46A]/42 sm:block" aria-hidden="true" />
             <span className="hidden text-xs font-medium tracking-[0.18em] text-[#CFC6B8] sm:block">
-              特种纸业供应链专业服务商
+              彩卡特种纸供应链专业服务商
             </span>
           </Link>
 

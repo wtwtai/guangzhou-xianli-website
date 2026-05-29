@@ -13,7 +13,7 @@ export const metadata = metadataFor("/channel-partners");
 
 const reasons = [
   "产品线清晰",
-  "背景纸有细分优势",
+  "彩卡特种纸有细分优势",
   "品控标准公开",
   "供应稳定",
   "支持定制",
@@ -34,7 +34,7 @@ const partners = [
 ];
 
 const supportRows = [
-  { item: "产品支持", content: "专业背景纸、精品包装纸、特种卡纸、文具封面纸多品类组合" },
+  { item: "产品支持", content: "彩卡特种纸、专业背景纸、精品包装纸、特种卡纸、文具封面纸多品类组合" },
   { item: "资料支持", content: "产品目录、规格表、图片、视频、卖点说明" },
   { item: "样品支持", content: "提供样品包，方便客户展示和测试" },
   { item: "培训支持", content: "产品知识、销售话术、应用场景培训" },
@@ -68,7 +68,7 @@ const channelFields: ContactField[] = [
     label: "感兴趣产品",
     type: "select",
     required: true,
-    options: ["专业背景纸", "精品包装纸", "特种卡纸", "文具封面纸", "多品类组合"],
+    options: ["彩卡特种纸", "专业背景纸", "精品包装纸", "特种卡纸", "文具封面纸", "多品类组合"],
   },
   { name: "volume", label: "预计采购量", placeholder: "例如：每月/每季度预估数量" },
   {
@@ -85,8 +85,8 @@ export default function ChannelPartnersPage() {
     <>
       <PageHero
         eyebrow="Channel Partners"
-        title="成为仙麗纸品渠道合作伙伴"
-        description="与仙麗一起，把标准化纸品带给更多摄影、文具、包装与批发市场客户。"
+        title="成为仙麗彩卡特种纸渠道合作伙伴"
+        description="与仙麗一起，把标准化彩卡特种纸带给更多摄影、文具、包装与批发市场客户。"
       >
         <ImagePlaceholder
           label="特种纸品渠道合作产品视觉"

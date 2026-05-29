@@ -25,7 +25,7 @@ export default function ProductsPage() {
       <PageHero
         eyebrow="Products"
         title="产品中心"
-        description="以专业背景纸为核心，覆盖精品包装纸、特种卡纸、文具封面纸等特种纸品供应。"
+        description="以彩卡特种纸供应链为核心，覆盖专业背景纸、精品包装纸、特种卡纸、文具封面纸等特种纸品供应。"
       >
         <ImagePlaceholder
           label="四大特种纸产品线组合视觉"
@@ -38,8 +38,8 @@ export default function ProductsPage() {
         <Container>
           <SectionHeader
             eyebrow="Product Portfolio"
-            title="四大纸品产品线"
-            description="面向渠道商、批发商、电商卖家、摄影器材渠道、文具渠道和品牌客户，提供可组合的纸品供应方案。"
+            title="四大彩卡特种纸产品线｜彩卡特种纸供应链一站式服务"
+            description="面向渠道商、批发商、电商卖家、摄影器材渠道、文具渠道和品牌客户，提供可组合的彩卡特种纸供应方案。"
             align="center"
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">

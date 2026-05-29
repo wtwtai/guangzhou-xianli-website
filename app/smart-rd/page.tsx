@@ -30,7 +30,7 @@ export default function SmartRdPage() {
       <PageHero
         eyebrow="Smart R&D"
         title="智能设备与研发能力"
-        description="通过设备研发与流程优化，让背景纸加工、包装和批量交付更加稳定。"
+        description="通过设备研发与流程优化，让彩卡特种纸加工、包装和批量交付更加稳定。"
       >
         <ImagePlaceholder label="后期替换：设备运转视频" kind="device" />
       </PageHero>
@@ -41,7 +41,7 @@ export default function SmartRdPage() {
             <SectionHeader
               eyebrow="Processing Value"
               title="智能化加工的价值"
-              description="专业背景纸不仅需要稳定纸张资源，也需要稳定的加工与包装能力。仙麗科技持续优化背景纸加工设备与流程，提升产品规格一致性、交付效率和定制响应速度。"
+              description="彩卡特种纸不仅需要稳定纸张资源，也需要稳定的加工与包装能力。仙麗科技持续优化加工设备与流程，提升产品规格一致性、交付效率和定制响应速度。"
             />
             <div className="grid gap-5 sm:grid-cols-2">
               {valueCards.map((card) => (
@@ -105,7 +105,7 @@ export default function SmartRdPage() {
 
       <CTASection
         title="需要了解定制加工能力？"
-        description="欢迎提供规格、包装、渠道销售方式和预估订单量，我们将协助评估加工与供货方案。"
+        description="欢迎提供彩卡特种纸规格、包装、渠道销售方式和预估订单量，我们将协助评估加工与供货方案。"
         primaryLabel="了解定制加工能力"
         primaryHref="/contact"
       />

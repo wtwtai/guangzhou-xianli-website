@@ -35,7 +35,7 @@ export default function ContactPage() {
         description="欢迎渠道商、批发商、品牌客户与展会采购客户联系仙麗科技。"
       >
         <ImagePlaceholder
-          label="特种纸业供应链洽谈视觉"
+          label="彩卡特种纸供应链洽谈视觉"
           kind="expo"
           src="/brand-assets/xianli-hero-british-luxury.png"
         />

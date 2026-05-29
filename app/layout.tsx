@@ -7,16 +7,17 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "仙麗科技｜特种纸业供应链专业服务商｜专业背景纸与纸品批发合作",
+    default: "仙麗科技｜彩卡特种纸供应链专业服务商｜彩卡特种纸与纸品批发合作",
     template: "%s",
   },
   description:
-    "仙麗科技专注专业背景纸标准化、特种纸品供应链与全国渠道合作，提供背景纸、精品包装纸、特种卡纸、文具封面纸等纸品供应链解决方案。",
+    "仙麗科技深耕彩卡特种纸全链，依托自有产能、先进设备、ISO 国际认证及 FSC、PEFC 森林认证，为渠道客户提供彩卡特种纸供应链解决方案。",
   keywords: [
     "仙麗科技",
+    "彩卡特种纸",
+    "彩卡特种纸供应链",
     "专业背景纸",
     "背景纸批发",
-    "特种纸业供应链",
     "纸品渠道合作",
     "特种卡纸",
     "精品包装纸",
@@ -37,9 +38,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "仙麗科技｜特种纸业供应链专业服务商",
+    title: "仙麗科技｜彩卡特种纸供应链专业服务商",
     description:
-      "专注专业背景纸标准化、特种纸品供应链与全国渠道合作。",
+      "深耕彩卡特种纸全链，自有产能、先进设备与认证体系支撑稳定供应。",
     url: siteConfig.url,
     siteName: "仙麗科技",
     locale: "zh_CN",
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "仙麗科技｜特种纸业供应链专业服务商",
+    title: "仙麗科技｜彩卡特种纸供应链专业服务商",
     description:
-      "专注专业背景纸标准化、特种纸品供应链与全国渠道合作。",
+      "深耕彩卡特种纸全链，自有产能、先进设备与认证体系支撑稳定供应。",
   },
   robots: {
     index: true,

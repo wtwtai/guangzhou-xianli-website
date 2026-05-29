@@ -16,7 +16,7 @@ export default function ResourcesPage() {
       <PageHero
         eyebrow="Resources"
         title="资料中心"
-        description="获取仙麗科技产品、标准、认证与渠道合作资料。"
+        description="获取仙麗科技彩卡特种纸产品、标准、认证与渠道合作资料。"
       >
         <ImagePlaceholder
           label="产品资料与目录封面视觉"
@@ -29,7 +29,7 @@ export default function ResourcesPage() {
         <Container>
           <SectionHeader
             eyebrow="Downloads"
-            title="产品、标准、认证与合作资料"
+            title="彩卡特种纸产品、标准、认证与合作资料"
             description="下载按钮先做占位，后期可替换为真实 PDF 链接、文件下载接口或资料申请流程。"
             align="center"
           />

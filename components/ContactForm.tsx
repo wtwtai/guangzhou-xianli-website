@@ -25,7 +25,7 @@ const defaultFields: ContactField[] = [
     label: "感兴趣产品",
     type: "select",
     required: true,
-    options: ["专业背景纸", "精品包装纸", "特种卡纸", "文具封面纸", "多品类组合"],
+    options: ["彩卡特种纸", "专业背景纸", "精品包装纸", "特种卡纸", "文具封面纸", "多品类组合"],
   },
   {
     name: "cooperation",

@@ -14,7 +14,7 @@ export function Footer() {
             <span className="text-xs tracking-[0.16em] text-[#CFC6B8]">SPECIAL PAPER SUPPLY</span>
           </div>
           <p className="mt-5 max-w-sm text-sm leading-7 text-[#CFC6B8]">
-            专注专业背景纸、特种纸品供应链、标准化品控与全国渠道合作的专业服务商。
+            深耕彩卡特种纸全链，依托自有产能、先进设备与认证体系服务全国渠道客户。
           </p>
         </div>
 

@@ -23,7 +23,7 @@ export default function CertificationsPage() {
       <PageHero
         eyebrow="Certifications"
         title="环保认证与负责任纸品供应"
-        description="持续完善纸品环保检测与认证体系，为客户提供更清晰、更可靠的采购依据。"
+        description="持续完善彩卡特种纸环保检测与认证体系，为客户提供更清晰、更可靠的采购依据。"
       >
         <ImagePlaceholder label="后期替换：证书图片" kind="certificate" />
       </PageHero>
@@ -34,7 +34,7 @@ export default function CertificationsPage() {
             <SectionHeader
               eyebrow="Sustainability"
               title="环保理念"
-              description="仙麗科技关注纸品来源、材料安全、包装环保与可持续供应。我们持续完善环保检测与认证资料，帮助客户更放心地采购和销售纸品。"
+              description="仙丽科技持续完善纸品环保检测，专注彩卡特种纸供应链，以专业、产能、设备、认证为核心，服务全球客户。"
             />
             <div className="grid gap-5 sm:grid-cols-2">
               {[

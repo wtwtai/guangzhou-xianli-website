@@ -1,12 +1,12 @@
 export const resources = [
   {
     title: "公司介绍 PDF",
-    description: "了解仙麗科技公司定位、能力与合作方向。",
+    description: "了解仙麗科技彩卡特种纸供应链定位、能力与合作方向。",
     status: "资料整理中",
   },
   {
     title: "产品目录 PDF",
-    description: "查看专业背景纸、精品包装纸、特种卡纸、文具封面纸等产品线。",
+    description: "查看彩卡特种纸、专业背景纸、精品包装纸、特种卡纸、文具封面纸等产品线。",
     status: "联系获取",
   },
   {

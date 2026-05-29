@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight,
-  Boxes,
   Camera,
   ClipboardCheck,
   Cpu,
@@ -37,13 +36,13 @@ const positioningCards = [
     icon: Network,
     title: "源头供应链整合",
     description:
-      "稳定整合专业背景纸、精品包装纸、特种卡纸、文具封面纸等资源，为客户提供更清晰的产品组合。",
+      "稳定整合彩卡特种纸、专业背景纸、精品包装纸、文具封面纸等资源，为客户提供更清晰的产品组合。",
   },
   {
     icon: Camera,
-    title: "专业背景纸能力",
+    title: "彩卡特种纸应用能力",
     description:
-      "聚焦摄影背景纸细分市场，重视颜色、平整度、哑光表现、包装保护和批量一致性。",
+      "聚焦彩卡特种纸应用场景，重视色彩、纹理、触感、包装保护和批量一致性。",
   },
   {
     icon: ClipboardCheck,
@@ -62,27 +61,24 @@ const positioningCards = [
 const advantages = [
   {
     icon: Camera,
-    title: "专业背景纸品类能力",
-    description:
-      "围绕摄影使用场景，建立从颜色、克重、表面哑光度、纸张平整度到运输包装的产品标准。",
+    title: "专业深耕彩卡特种纸 26 年",
+    description: "专注供应链，专业团队，定制化服务。",
+  },
+  {
+    icon: Factory,
+    title: "自有规模化产能",
+    description: "现代管理生产基地，交付稳定可靠。",
   },
   {
     icon: Cpu,
-    title: "智能化加工与研发能力",
-    description:
-      "通过智能化设备提升加工效率、批量稳定性和定制响应速度。",
+    title: "自研智能设备",
+    description: "全自动化产线，精度高、品质稳、一致性强。",
   },
   {
     icon: ShieldCheck,
-    title: "公开化品控标准",
+    title: "国际认证体系",
     description:
-      "将背景纸的规格、外观、包装、抽检流程标准化，帮助客户降低采购风险。",
-  },
-  {
-    icon: Boxes,
-    title: "特种纸品供应链",
-    description:
-      "覆盖专业背景纸、精品包装纸、特种卡纸、文具封面纸，为渠道商提供更多可组合销售的纸品品类。",
+      "通过 ISO 质量体系认证、FSC、PEFC 森林认证，专业品质，国际标准背书。",
   },
 ];
 
@@ -91,7 +87,7 @@ const smartList = [
   "提升尺寸一致性与产品外观统一性",
   "优化卷装、裁切、包装等关键环节",
   "支持渠道订单和定制订单的快速响应",
-  "让背景纸从经验化加工走向标准化交付",
+  "让彩卡特种纸从经验化采购走向标准化交付",
 ];
 
 const qualityStandards = [
@@ -137,7 +133,7 @@ const productImages = [
 
 const heroKeywords = [
   { icon: Camera, title: "专业背景纸", text: "专业摄影 · 影像级表现" },
-  { icon: Network, title: "特种纸供应链", text: "稳定供货 · 快速响应" },
+  { icon: Network, title: "彩卡特种纸供应链", text: "稳定供货 · 快速响应" },
   { icon: ShieldCheck, title: "标准化品控", text: "全流程检测 · 稳定如一" },
   { icon: Users, title: "全国渠道合作", text: "系统支持 · 共赢成长" },
 ];
@@ -159,7 +155,7 @@ export default function Home() {
       <section className="relative isolate overflow-hidden border-b border-[#D6B46A]/20 bg-[#050505] text-[#F3EBDD]">
         <Image
           src="/brand-assets/xianli-hero-british-luxury.png"
-          alt="英式黑金特种纸业供应链产品视觉"
+          alt="英式黑金彩卡特种纸供应链产品视觉"
           fill
           priority
           sizes="100vw"
@@ -173,10 +169,10 @@ export default function Home() {
               {siteConfig.name}｜{siteConfig.positioning}
             </p>
             <h1 className="luxury-heading text-5xl font-semibold leading-tight tracking-normal text-[#D6B46A] sm:text-6xl lg:text-7xl">
-              特种纸业供应链专业服务商
+              彩卡特种纸供应链专业服务商
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#F3EBDD]">
-              专注专业背景纸、精品包装纸、特种卡纸与文具封面纸。仙麗科技以智能化加工、公开化品控标准和稳定供应链，帮助渠道客户降低采购风险，提升纸品销售效率。
+              深耕彩卡特种纸全链・自有产能・先进设备・ISO 国际认证・FSC、PEFC 森林认证
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -215,7 +211,7 @@ export default function Home() {
         <Container>
           <SectionHeader
             eyebrow="Company Positioning"
-            title="不只是纸张供应，更是纸品渠道解决方案"
+            title="不止彩卡特种纸供应，更是供应链专业服务商"
             description="仙麗科技围绕特种纸品的采购、加工、品控、包装、渠道销售和长期供货，建立更适合批发客户与渠道商的纸品服务体系。"
             align="center"
           />
@@ -235,8 +231,8 @@ export default function Home() {
         <Container>
           <SectionHeader
             eyebrow="Core Advantages"
-            title="为什么渠道客户选择仙麗科技"
-            description="围绕专业背景纸标准化能力与特种纸品供应链，仙麗科技为长期合作客户提供更稳定的产品和服务基础。"
+            title="为什么客户选择仙丽｜彩卡特种纸业供应链专业服务商"
+            description="围绕彩卡特种纸供应链、规模化产能、智能设备与认证体系，仙麗科技为长期合作客户提供更稳定的产品和服务基础。"
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {advantages.map((advantage) => (
@@ -253,8 +249,8 @@ export default function Home() {
             <div>
               <SectionHeader
                 eyebrow="Smart Processing"
-                title="智能化设备，让背景纸交付更稳定"
-                description="仙麗科技持续投入专业背景纸加工设备与流程优化，让规格化生产、卷装加工、包装保护和批量交付更加稳定。"
+                title="智能化生产｜彩卡特种纸交付更高效"
+                description="仙麗科技持续优化彩卡特种纸加工设备与流程，让规格化生产、精细加工、包装保护和批量交付更加稳定。"
               />
               <ul className="mt-8 space-y-4">
                 {smartList.map((item) => (
@@ -282,8 +278,8 @@ export default function Home() {
         <Container>
           <SectionHeader
             eyebrow="Quality Standards"
-            title="公开背景纸品控标准，让采购更有依据"
-            description="围绕规格、外观、哑光表现、包装保护、抽检与追溯，仙麗科技将背景纸采购中的关键判断转化为可沟通、可检查的标准。"
+            title="公开透明品质标准｜彩卡特种纸采购更放心"
+            description="围绕使用场景、用户需求，从原料到成品全流程管控；专业供应链能力，专注每一批彩卡特种纸的品质保证。"
             align="center"
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -307,8 +303,8 @@ export default function Home() {
         <Container>
           <SectionHeader
             eyebrow="Product Lines"
-            title="四大纸品产品线"
-            description="以专业背景纸为核心，向精品包装纸、特种卡纸、文具封面纸等特种纸品组合延伸。"
+            title="四大彩卡特种纸产品线｜彩卡特种纸供应链一站式服务"
+            description="以彩卡特种纸供应链为核心，向专业背景纸、精品包装纸、特种卡纸、文具封面纸等产品组合延伸。"
             align="center"
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -332,8 +328,8 @@ export default function Home() {
             <div>
               <SectionHeader
                 eyebrow="Sustainability"
-                title="关注环保与可持续纸品供应"
-                description="仙麗科技持续完善纸品环保检测、认证资料与可持续供应管理，为客户提供更清晰、更可靠的采购依据。"
+                title="关注仙丽｜环保与可持续彩卡特种纸供应"
+                description="仙丽科技持续完善纸品环保检测，专注彩卡特种纸供应链，以专业、产能、设备、认证为核心，服务全球客户。"
               />
               <p className="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-[#7C4A03]">
                 实际认证请以后期提供的证书文件为准。
@@ -365,8 +361,8 @@ export default function Home() {
             <div>
               <SectionHeader
                 eyebrow="Channel Partners"
-                title="面向全国招募纸品渠道合作伙伴"
-                description="我们为经销商、批发商、摄影器材渠道、文具渠道、电商卖家提供稳定产品、标准资料、样品支持与长期供货服务。"
+                title="面向全国招商｜彩卡特种纸业供应链专业服务商"
+                description="依托彩卡特种纸供应链优势、自有产能、先进设备与 ISO 认证、FSC、PEFC 森林认证等，我们为经销商、批发商、摄影器材渠道、文具渠道、电商卖家提供稳定产品、标准资料、样品支持与长期供货服务，合作共赢。"
               />
               <Link
                 href="/channel-partners#apply"
@@ -392,7 +388,7 @@ export default function Home() {
         <Container>
           <SectionHeader
             eyebrow="Resources"
-            title="获取仙麗科技产品资料"
+            title="获取仙丽彩卡特种纸资料"
             description="资料中心会集中维护公司介绍、产品目录、背景纸规格表、色卡、渠道政策与环保认证资料，便于展会和渠道客户快速获取。"
             align="center"
           />
@@ -432,8 +428,8 @@ export default function Home() {
       </section>
 
       <CTASection
-        title="想了解仙麗纸品合作方案？"
-        description="无论您是渠道商、批发商、品牌客户还是展会采购客户，都可以联系我们获取产品资料、样品和合作政策。"
+        title="想了解仙丽彩卡特种纸定制方案？"
+        description="聚焦彩卡特种纸应用场景，依托产能、设备与专业经验，提供适配的供应链解决方案，想获取产品资料、样品和合作政策请联系我们。"
         primaryLabel="立即联系"
         primaryHref="/contact"
         secondaryLabel="申请渠道合作"
