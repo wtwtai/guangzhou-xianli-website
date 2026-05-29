@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b0a08;
-  --foreground: #f4efe5;
-  --navy: #0b0a08;
-  --graphite: #17130d;
-  --paper: #11100d;
-  --line: rgba(201, 162, 74, 0.22);
-  --green: #c9a24a;
-  --copper: #d8be75;
+  --background: #050505;
+  --foreground: #f3ebdd;
+  --navy: #050505;
+  --graphite: #151515;
+  --paper: #0e0c09;
+  --line: rgba(214, 180, 106, 0.22);
+  --green: #d6b46a;
+  --copper: #d6b46a;
   --muted: #cfc6b8;
-  --panel: #12100c;
-  --panel-soft: #18150f;
+  --panel: #0e0c09;
+  --panel-soft: #15110d;
+  --burgundy: #5a1720;
 }
 
 @theme inline {
@@ -23,7 +24,9 @@
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at 82% 14%, rgba(90, 23, 32, 0.2), transparent 30%),
+    var(--background);
   color: var(--foreground);
   color-scheme: dark;
   font-family: "SF Pro Display", "Helvetica Neue", Arial, "Microsoft YaHei",
@@ -49,16 +52,16 @@ textarea {
 
 .paper-grid {
   background-image:
-    linear-gradient(rgba(201, 162, 74, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201, 162, 74, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(214, 180, 106, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(214, 180, 106, 0.08) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
 .paper-lines {
   background-image: repeating-linear-gradient(
     135deg,
-    rgba(201, 162, 74, 0.13) 0,
-    rgba(201, 162, 74, 0.13) 1px,
+    rgba(214, 180, 106, 0.12) 0,
+    rgba(214, 180, 106, 0.12) 1px,
     transparent 1px,
     transparent 13px
   );
@@ -66,17 +69,17 @@ textarea {
 
 .subtle-shadow {
   box-shadow:
-    inset 0 1px 0 rgba(216, 190, 117, 0.05),
+    inset 0 1px 0 rgba(214, 180, 106, 0.06),
     0 2px 12px rgba(0, 0, 0, 0.18);
 }
 
 .bg-white,
 .bg-white\/95 {
-  background-color: rgba(18, 16, 12, 0.96);
+  background-color: rgba(14, 12, 9, 0.96);
 }
 
 .bg-white\/10 {
-  background-color: rgba(201, 162, 74, 0.1);
+  background-color: rgba(214, 180, 106, 0.1);
 }
 
 .bg-slate-50,
@@ -86,7 +89,7 @@ textarea {
 
 .bg-amber-50,
 .bg-emerald-50 {
-  background-color: rgba(201, 162, 74, 0.11);
+  background-color: rgba(214, 180, 106, 0.11);
 }
 
 .border-slate-200,
@@ -103,12 +106,12 @@ textarea {
 .ring-amber-100,
 .ring-emerald-100,
 .ring-white\/20 {
-  --tw-ring-color: rgba(201, 162, 74, 0.24);
+  --tw-ring-color: rgba(214, 180, 106, 0.24);
 }
 
 .text-slate-900,
 .text-slate-100 {
-  color: #f4efe5;
+  color: #f3ebdd;
 }
 
 .text-slate-700,
@@ -124,55 +127,55 @@ textarea {
 }
 
 .text-emerald-100 {
-  color: #f0d98c;
+  color: #f3ebdd;
 }
 
 .shadow-sm {
-  box-shadow: inset 0 1px 0 rgba(216, 190, 117, 0.05);
+  box-shadow: inset 0 1px 0 rgba(214, 180, 106, 0.05);
 }
 
 [class~="bg-[#0B1F3A]"] {
-  background-color: #0b0a08;
-  color: #d8be75;
+  background-color: #050505;
+  color: #d6b46a;
 }
 
 [class~="bg-[#2F855A]"] {
-  background-color: #d8be75;
-  color: #0b0a08;
+  background-color: #d6b46a;
+  color: #050505;
 }
 
 [class~="text-[#0B1F3A]"],
 [class~="text-[#2F855A]"],
 [class~="text-[#B7791F]"],
 [class~="text-[#7C4A03]"] {
-  color: #d8be75;
+  color: #d6b46a;
 }
 
 [class~="hover:bg-[#12345d]"]:hover {
-  background-color: #1c1710;
-  color: #f0d98c;
+  background-color: #1a1510;
+  color: #f3ebdd;
 }
 
 [class~="hover:bg-[#276f4b]"]:hover {
   background-color: #b8913e;
-  color: #0b0a08;
+  color: #050505;
 }
 
 [class~="hover:text-[#0B1F3A]"]:hover,
 [class~="hover:text-[#2F855A]"]:hover {
-  color: #f0d98c;
+  color: #f3ebdd;
 }
 
 [class~="hover:border-[#2F855A]"]:hover,
 [class~="hover:border-[#2F855A]/30"]:hover,
 .hover\:border-emerald-100:hover {
-  border-color: rgba(216, 190, 117, 0.5);
+  border-color: rgba(214, 180, 106, 0.5);
 }
 
 .hover\:bg-slate-50:hover,
 .hover\:bg-slate-100:hover,
 .hover\:bg-white\/10:hover {
-  background-color: rgba(201, 162, 74, 0.12);
+  background-color: rgba(214, 180, 106, 0.12);
 }
 
 input,
@@ -185,8 +188,24 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #d8be75;
-  box-shadow: 0 0 0 2px rgba(216, 190, 117, 0.14);
+  border-color: #d6b46a;
+  box-shadow: 0 0 0 2px rgba(214, 180, 106, 0.14);
+}
+
+.luxury-wordmark,
+.luxury-heading {
+  font-family: "Times New Roman", "Songti SC", "SimSun", "Noto Serif CJK SC",
+    serif;
+}
+
+.burgundy-surface {
+  background:
+    linear-gradient(135deg, rgba(90, 23, 32, 0.72), rgba(14, 12, 9, 0.96)),
+    #15110d;
+}
+
+.gold-rule {
+  background: linear-gradient(90deg, transparent, rgba(214, 180, 106, 0.76), transparent);
 }
 
 @keyframes fade-up {

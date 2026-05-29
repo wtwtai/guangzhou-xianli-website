@@ -9,12 +9,12 @@ export function ProcessSteps({ steps }: { steps: Step[] }) {
       {steps.map((step, index) => (
         <article
           key={step.title}
-          className="relative rounded-lg border border-[#C9A24A]/20 bg-[#12100C] p-5 shadow-sm"
+          className="relative rounded-lg border border-[#D6B46A]/20 bg-[#0E0C09] p-5 shadow-sm"
         >
-          <div className="mb-4 flex size-9 items-center justify-center rounded-md border border-[#C9A24A]/25 bg-[#C9A24A]/10 text-sm font-semibold text-[#D8BE75]">
+          <div className="mb-4 flex size-9 items-center justify-center rounded-md border border-[#D6B46A]/25 bg-[#D6B46A]/10 text-sm font-semibold text-[#D6B46A]">
             {String(index + 1).padStart(2, "0")}
           </div>
-          <h3 className="font-semibold text-[#D8BE75]">{step.title}</h3>
+          <h3 className="font-semibold text-[#D6B46A]">{step.title}</h3>
           {step.description ? (
             <p className="mt-2 text-sm leading-7 text-[#CFC6B8]">{step.description}</p>
           ) : null}

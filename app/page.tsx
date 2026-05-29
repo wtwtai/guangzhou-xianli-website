@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Boxes,
@@ -36,7 +37,7 @@ const positioningCards = [
     icon: Network,
     title: "源头供应链整合",
     description:
-      "稳定整合背景纸、卡纸、包装纸、文具用纸等纸品资源，为客户提供更清晰的产品组合。",
+      "稳定整合专业背景纸、精品包装纸、特种卡纸、文具封面纸等资源，为客户提供更清晰的产品组合。",
   },
   {
     icon: Camera,
@@ -79,9 +80,9 @@ const advantages = [
   },
   {
     icon: Boxes,
-    title: "多品类纸品供应链",
+    title: "特种纸品供应链",
     description:
-      "覆盖摄影背景纸、彩卡卡纸、包装纸、文具用品纸，为渠道商提供更多可组合销售的纸品品类。",
+      "覆盖专业背景纸、精品包装纸、特种卡纸、文具封面纸，为渠道商提供更多可组合销售的纸品品类。",
   },
 ];
 
@@ -126,7 +127,20 @@ const qualityStandards = [
   },
 ];
 
-const productIcons = [Camera, Palette, PackageCheck, FileText];
+const productIcons = [Camera, PackageCheck, Palette, FileText];
+const productImages = [
+  "/brand-assets/product-backdrop-paper.png",
+  "/brand-assets/product-packaging-paper.png",
+  "/brand-assets/product-card-paper.png",
+  "/brand-assets/product-stationery-cover.png",
+];
+
+const heroKeywords = [
+  { icon: Camera, title: "专业背景纸", text: "专业摄影 · 影像级表现" },
+  { icon: Network, title: "特种纸供应链", text: "稳定供货 · 快速响应" },
+  { icon: ShieldCheck, title: "标准化品控", text: "全流程检测 · 稳定如一" },
+  { icon: Users, title: "全国渠道合作", text: "系统支持 · 共赢成长" },
+];
 
 const partnerTypes = [
   "纸张批发商",
@@ -142,49 +156,57 @@ const partnerTypes = [
 export default function Home() {
   return (
     <>
-      <section className="relative isolate overflow-hidden border-b border-[#C9A24A]/20 bg-[#0B0A08] text-[#F4EFE5]">
-        <div className="absolute inset-0 paper-grid opacity-80" aria-hidden="true" />
-        <div className="absolute inset-x-0 bottom-0 h-px bg-[#C9A24A]/30" aria-hidden="true" />
-        <Container className="relative grid min-h-[calc(100vh-72px)] items-center gap-12 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-20">
-          <div className="fade-up">
-            <p className="mb-4 inline-flex rounded-md border border-[#C9A24A]/25 px-3 py-1.5 text-sm font-semibold text-[#D8BE75]">
+      <section className="relative isolate overflow-hidden border-b border-[#D6B46A]/20 bg-[#050505] text-[#F3EBDD]">
+        <Image
+          src="/brand-assets/xianli-hero-british-luxury.png"
+          alt="英式黑金特种纸业供应链产品视觉"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-90"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,5,5,0.98)_0%,rgba(5,5,5,0.9)_24%,rgba(5,5,5,0.34)_62%,rgba(5,5,5,0.1)_100%)]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(5,5,5,0.96)_0%,rgba(5,5,5,0.24)_30%,rgba(5,5,5,0.3)_100%)]" aria-hidden="true" />
+        <Container className="relative flex min-h-[calc(100svh-72px)] flex-col justify-end py-10 sm:py-12 lg:py-14">
+          <div className="fade-up max-w-4xl pb-8 pt-20 sm:pt-28 lg:pt-36">
+            <p className="mb-5 inline-flex rounded-md border border-[#D6B46A]/30 bg-[#050505]/45 px-3 py-1.5 text-sm font-semibold tracking-[0.12em] text-[#D6B46A] backdrop-blur">
               {siteConfig.name}｜{siteConfig.positioning}
             </p>
-            <h1 className="max-w-4xl text-4xl font-semibold tracking-normal text-[#D8BE75] sm:text-5xl lg:text-6xl">
-              专业纸业供应链服务商
+            <h1 className="luxury-heading text-5xl font-semibold leading-tight tracking-normal text-[#D6B46A] sm:text-6xl lg:text-7xl">
+              特种纸业供应链专业服务商
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#CFC6B8]">
-              专注摄影背景纸标准化、多品类纸品批发与全国渠道合作。仙麗科技以智能化加工、公开化品控标准和稳定供应链，帮助渠道客户降低采购风险，提升纸品销售效率。
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#F3EBDD]">
+              专注专业背景纸、精品包装纸、特种卡纸与文具封面纸。仙麗科技以智能化加工、公开化品控标准和稳定供应链，帮助渠道客户降低采购风险，提升纸品销售效率。
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/products"
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-[#D8BE75] px-5 py-3 text-sm font-semibold text-[#0B0A08] transition hover:bg-[#B8913E]"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-[#D6B46A] px-6 py-3 text-sm font-semibold text-[#050505] transition hover:bg-[#B8913E]"
               >
                 了解产品线
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
               <Link
                 href="/channel-partners#apply"
-                className="inline-flex items-center justify-center rounded-md border border-[#C9A24A]/35 px-5 py-3 text-sm font-semibold text-[#D8BE75] transition hover:bg-[#C9A24A]/10"
+                className="inline-flex items-center justify-center rounded-md border border-[#D6B46A]/55 bg-[#050505]/28 px-6 py-3 text-sm font-semibold text-[#D6B46A] backdrop-blur transition hover:bg-[#D6B46A]/10"
               >
                 申请渠道合作
               </Link>
             </div>
-            <div className="mt-10 grid max-w-3xl gap-3 sm:grid-cols-4">
-              {["专业背景纸", "标准化品控", "智能化加工", "全国渠道合作"].map((keyword) => (
-                <div key={keyword} className="rounded-md border border-[#C9A24A]/20 bg-[#C9A24A]/10 px-4 py-3 text-sm font-semibold text-[#F0D98C]">
-                  {keyword}
-                </div>
-              ))}
-            </div>
           </div>
-          <div className="fade-up">
-            <ImagePlaceholder
-              label="后期替换：高级纸卷、纸张纹理与供应链视觉"
-              kind="product"
-              className="min-h-[420px]"
-            />
+
+          <div className="fade-up grid gap-3 pb-1 md:grid-cols-2 xl:grid-cols-4">
+            {heroKeywords.map((item) => (
+              <div key={item.title} className="flex items-center gap-4 rounded-lg border border-[#D6B46A]/28 bg-[#050505]/70 p-4 backdrop-blur">
+                <span className="flex size-12 shrink-0 items-center justify-center rounded-full border border-[#D6B46A]/35 text-[#D6B46A]">
+                  <item.icon className="size-5" aria-hidden="true" />
+                </span>
+                <span>
+                  <span className="block text-base font-semibold text-[#F3EBDD]">{item.title}</span>
+                  <span className="mt-1 block text-xs font-medium tracking-[0.08em] text-[#CFC6B8]">{item.text}</span>
+                </span>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
@@ -194,7 +216,7 @@ export default function Home() {
           <SectionHeader
             eyebrow="Company Positioning"
             title="不只是纸张供应，更是纸品渠道解决方案"
-            description="仙麗科技围绕专业纸品的采购、加工、品控、包装、渠道销售和长期供货，建立更适合批发客户与渠道商的纸品服务体系。"
+            description="仙麗科技围绕特种纸品的采购、加工、品控、包装、渠道销售和长期供货，建立更适合批发客户与渠道商的纸品服务体系。"
             align="center"
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -214,7 +236,7 @@ export default function Home() {
           <SectionHeader
             eyebrow="Core Advantages"
             title="为什么渠道客户选择仙麗科技"
-            description="围绕专业背景纸标准化能力与多品类纸品供应链，仙麗科技为长期合作客户提供更稳定的产品和服务基础。"
+            description="围绕专业背景纸标准化能力与特种纸品供应链，仙麗科技为长期合作客户提供更稳定的产品和服务基础。"
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {advantages.map((advantage) => (
@@ -286,7 +308,7 @@ export default function Home() {
           <SectionHeader
             eyebrow="Product Lines"
             title="四大纸品产品线"
-            description="以摄影背景纸为核心，向彩卡卡纸、包装纸、文具用品纸等多品类纸品组合延伸。"
+            description="以专业背景纸为核心，向精品包装纸、特种卡纸、文具封面纸等特种纸品组合延伸。"
             align="center"
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -297,6 +319,7 @@ export default function Home() {
                 title={product.title}
                 description={product.summary}
                 href={product.href}
+                imageSrc={productImages[index]}
               />
             ))}
           </div>

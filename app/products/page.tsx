@@ -10,8 +10,14 @@ import { metadataFor } from "@/data/site";
 
 export const metadata = metadataFor("/products");
 
-const icons = [Camera, Palette, PackageCheck, FileText];
-const anchors = ["backdrop-paper", "card-paper", "packaging-paper", "stationery-paper"];
+const icons = [Camera, PackageCheck, Palette, FileText];
+const anchors = ["backdrop-paper", "packaging-paper", "card-paper", "stationery-paper"];
+const productImages = [
+  "/brand-assets/product-backdrop-paper.png",
+  "/brand-assets/product-packaging-paper.png",
+  "/brand-assets/product-card-paper.png",
+  "/brand-assets/product-stationery-cover.png",
+];
 
 export default function ProductsPage() {
   return (
@@ -19,9 +25,13 @@ export default function ProductsPage() {
       <PageHero
         eyebrow="Products"
         title="产品中心"
-        description="以摄影背景纸为核心，覆盖彩卡卡纸、包装纸、文具用品纸等多品类纸品供应。"
+        description="以专业背景纸为核心，覆盖精品包装纸、特种卡纸、文具封面纸等特种纸品供应。"
       >
-        <ImagePlaceholder label="后期替换：四大产品线组合图片" kind="product" />
+        <ImagePlaceholder
+          label="四大特种纸产品线组合视觉"
+          kind="product"
+          src="/brand-assets/xianli-hero-british-luxury.png"
+        />
       </PageHero>
 
       <section className="py-20 sm:py-24">
@@ -40,6 +50,7 @@ export default function ProductsPage() {
                 title={product.title}
                 description={product.summary}
                 href={`#${anchors[index]}`}
+                imageSrc={productImages[index]}
               />
             ))}
           </div>
@@ -57,7 +68,11 @@ export default function ProductsPage() {
                 className="scroll-mt-24 rounded-lg border border-slate-200 bg-slate-50 p-5 sm:p-6"
               >
                 <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-                  <ImagePlaceholder label={`后期替换：${product.title}产品图片`} kind={index === 2 ? "packaging" : "product"} />
+                  <ImagePlaceholder
+                    label={`${product.title}产品图片`}
+                    kind={index === 1 ? "packaging" : "product"}
+                    src={productImages[index]}
+                  />
                   <div>
                     <div className="flex items-center gap-3">
                       <span className="flex size-11 items-center justify-center rounded-md bg-[#0B1F3A] text-white">

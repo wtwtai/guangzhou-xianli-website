@@ -25,7 +25,7 @@ const defaultFields: ContactField[] = [
     label: "感兴趣产品",
     type: "select",
     required: true,
-    options: ["摄影背景纸", "彩卡卡纸", "包装纸", "文具用品纸", "多品类组合"],
+    options: ["专业背景纸", "精品包装纸", "特种卡纸", "文具封面纸", "多品类组合"],
   },
   {
     name: "cooperation",
@@ -108,7 +108,7 @@ export function ContactForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className="subtle-shadow grid gap-5 rounded-lg border border-[#C9A24A]/20 bg-[#12100C] p-5 sm:grid-cols-2 sm:p-6"
+      className="subtle-shadow grid gap-5 rounded-lg border border-[#D6B46A]/20 bg-[#0E0C09] p-5 sm:grid-cols-2 sm:p-6"
       noValidate
     >
       {fields.map((field) => {
@@ -117,9 +117,9 @@ export function ContactForm({
 
         return (
           <div key={field.name} className={fieldClass}>
-            <label htmlFor={id} className="text-sm font-semibold text-[#D8BE75]">
+            <label htmlFor={id} className="text-sm font-semibold text-[#D6B46A]">
               {field.label}
-              {field.required ? <span className="text-[#F0D98C]"> *</span> : null}
+              {field.required ? <span className="text-[#F3EBDD]"> *</span> : null}
             </label>
             {field.type === "textarea" ? (
               <textarea
@@ -129,7 +129,7 @@ export function ContactForm({
                 placeholder={field.placeholder}
                 rows={4}
                 aria-invalid={Boolean(errors[field.name])}
-                className="mt-2 w-full rounded-md border border-[#C9A24A]/25 bg-[#0F0D0A] px-3 py-2.5 text-sm text-[#F4EFE5] transition placeholder:text-[#8F8678] focus:border-[#D8BE75] focus:ring-2 focus:ring-[#D8BE75]/15"
+                className="mt-2 w-full rounded-md border border-[#D6B46A]/25 bg-[#0F0D0A] px-3 py-2.5 text-sm text-[#F3EBDD] transition placeholder:text-[#8F8678] focus:border-[#D6B46A] focus:ring-2 focus:ring-[#D6B46A]/15"
               />
             ) : field.type === "select" ? (
               <select
@@ -137,7 +137,7 @@ export function ContactForm({
                 value={values[field.name]}
                 onChange={(event) => updateValue(field.name, event.target.value)}
                 aria-invalid={Boolean(errors[field.name])}
-                className="mt-2 w-full rounded-md border border-[#C9A24A]/25 bg-[#0F0D0A] px-3 py-2.5 text-sm text-[#F4EFE5] transition focus:border-[#D8BE75] focus:ring-2 focus:ring-[#D8BE75]/15"
+                className="mt-2 w-full rounded-md border border-[#D6B46A]/25 bg-[#0F0D0A] px-3 py-2.5 text-sm text-[#F3EBDD] transition focus:border-[#D6B46A] focus:ring-2 focus:ring-[#D6B46A]/15"
               >
                 <option value="">请选择</option>
                 {field.options?.map((option) => (
@@ -153,7 +153,7 @@ export function ContactForm({
                 onChange={(event) => updateValue(field.name, event.target.value)}
                 placeholder={field.placeholder}
                 aria-invalid={Boolean(errors[field.name])}
-                className="mt-2 w-full rounded-md border border-[#C9A24A]/25 bg-[#0F0D0A] px-3 py-2.5 text-sm text-[#F4EFE5] transition placeholder:text-[#8F8678] focus:border-[#D8BE75] focus:ring-2 focus:ring-[#D8BE75]/15"
+                className="mt-2 w-full rounded-md border border-[#D6B46A]/25 bg-[#0F0D0A] px-3 py-2.5 text-sm text-[#F3EBDD] transition placeholder:text-[#8F8678] focus:border-[#D6B46A] focus:ring-2 focus:ring-[#D6B46A]/15"
               />
             )}
             {errors[field.name] ? (
@@ -166,13 +166,13 @@ export function ContactForm({
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#D8BE75] px-5 py-3 text-sm font-semibold text-[#0B0A08] transition hover:bg-[#B8913E] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#D6B46A] px-5 py-3 text-sm font-semibold text-[#050505] transition hover:bg-[#B8913E] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
         >
           {status === "submitting" ? "提交中..." : submitLabel}
           <Send className="size-4" aria-hidden="true" />
         </button>
         {status === "success" ? (
-          <p className="mt-4 rounded-md border border-[#C9A24A]/25 bg-[#C9A24A]/10 px-4 py-3 text-sm font-medium text-[#D8BE75]">
+          <p className="mt-4 rounded-md border border-[#D6B46A]/25 bg-[#D6B46A]/10 px-4 py-3 text-sm font-medium text-[#D6B46A]">
             {successMessage}
           </p>
         ) : null}

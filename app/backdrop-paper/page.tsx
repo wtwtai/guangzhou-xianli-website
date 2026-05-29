@@ -49,7 +49,11 @@ export default function BackdropPaperPage() {
         title="专业摄影背景纸解决方案"
         description="为摄影棚、电商拍摄、内容创作者与渠道客户提供稳定、标准化、可批量供应的背景纸产品。"
       >
-        <ImagePlaceholder label="后期替换：背景纸产品图片" kind="product" />
+        <ImagePlaceholder
+          label="专业背景纸产品视觉"
+          kind="product"
+          src="/brand-assets/product-backdrop-paper.png"
+        />
       </PageHero>
 
       <section className="py-20 sm:py-24">

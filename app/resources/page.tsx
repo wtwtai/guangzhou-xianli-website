@@ -18,7 +18,11 @@ export default function ResourcesPage() {
         title="资料中心"
         description="获取仙麗科技产品、标准、认证与渠道合作资料。"
       >
-        <ImagePlaceholder label="后期替换：产品资料与目录封面" kind="document" />
+        <ImagePlaceholder
+          label="产品资料与目录封面视觉"
+          kind="document"
+          src="/brand-assets/product-card-paper.png"
+        />
       </PageHero>
 
       <section className="py-20 sm:py-24">

@@ -34,7 +34,11 @@ export default function ContactPage() {
         title="联系我们"
         description="欢迎渠道商、批发商、品牌客户与展会采购客户联系仙麗科技。"
       >
-        <ImagePlaceholder label="后期替换：公司门头、展厅或洽谈图片" kind="expo" />
+        <ImagePlaceholder
+          label="特种纸业供应链洽谈视觉"
+          kind="expo"
+          src="/brand-assets/xianli-hero-british-luxury.png"
+        />
       </PageHero>
 
       <section className="py-20 sm:py-24">

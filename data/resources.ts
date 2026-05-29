@@ -6,7 +6,7 @@ export const resources = [
   },
   {
     title: "产品目录 PDF",
-    description: "查看摄影背景纸、彩卡卡纸、包装纸、文具用品纸等产品线。",
+    description: "查看专业背景纸、精品包装纸、特种卡纸、文具封面纸等产品线。",
     status: "联系获取",
   },
   {

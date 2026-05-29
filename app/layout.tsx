@@ -7,20 +7,20 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "仙麗科技｜专业纸业供应链服务商｜摄影背景纸与纸品批发合作",
+    default: "仙麗科技｜特种纸业供应链专业服务商｜专业背景纸与纸品批发合作",
     template: "%s",
   },
   description:
-    "仙麗科技专注摄影背景纸标准化、多品类纸品批发与全国渠道合作，提供背景纸、彩卡卡纸、包装纸、文具用品纸等纸品供应链解决方案。",
+    "仙麗科技专注专业背景纸标准化、特种纸品供应链与全国渠道合作，提供背景纸、精品包装纸、特种卡纸、文具封面纸等纸品供应链解决方案。",
   keywords: [
     "仙麗科技",
-    "摄影背景纸",
+    "专业背景纸",
     "背景纸批发",
-    "纸品供应链",
+    "特种纸业供应链",
     "纸品渠道合作",
-    "彩卡卡纸",
-    "包装纸",
-    "文具用品纸",
+    "特种卡纸",
+    "精品包装纸",
+    "文具封面纸",
   ],
   authors: [{ name: "仙麗科技" }],
   creator: "仙麗科技",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "仙麗科技｜专业纸业供应链服务商",
+    title: "仙麗科技｜特种纸业供应链专业服务商",
     description:
-      "专注摄影背景纸标准化、多品类纸品批发与全国渠道合作。",
+      "专注专业背景纸标准化、特种纸品供应链与全国渠道合作。",
     url: siteConfig.url,
     siteName: "仙麗科技",
     locale: "zh_CN",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "仙麗科技｜专业纸业供应链服务商",
+    title: "仙麗科技｜特种纸业供应链专业服务商",
     description:
-      "专注摄影背景纸标准化、多品类纸品批发与全国渠道合作。",
+      "专注专业背景纸标准化、特种纸品供应链与全国渠道合作。",
   },
   robots: {
     index: true,

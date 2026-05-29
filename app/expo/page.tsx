@@ -20,7 +20,7 @@ const expoFields: ContactField[] = [
     label: "感兴趣产品",
     type: "select",
     required: true,
-    options: ["摄影背景纸", "彩卡卡纸", "包装纸", "文具用品纸", "渠道合作"],
+    options: ["专业背景纸", "精品包装纸", "特种卡纸", "文具封面纸", "渠道合作"],
   },
   { name: "message", label: "留言", type: "textarea", placeholder: "请填写展会沟通需求", fullWidth: true },
 ];
@@ -31,16 +31,20 @@ export default function ExpoPage() {
       <PageHero
         eyebrow="Expo Quick Page"
         title="欢迎了解仙麗科技纸品解决方案"
-        description="专注专业背景纸与多品类纸品批发，为渠道客户提供稳定、标准化、可持续合作的纸品供应。"
+        description="专注专业背景纸与特种纸品批发，为渠道客户提供稳定、标准化、可持续合作的纸品供应。"
       >
-        <ImagePlaceholder label="后期替换：展会图片" kind="expo" />
+        <ImagePlaceholder
+          label="展会客户快速了解产品视觉"
+          kind="expo"
+          src="/brand-assets/xianli-hero-british-luxury.png"
+        />
       </PageHero>
 
       <section className="py-16 sm:py-20">
         <Container>
           <div className="rounded-lg border border-slate-200 bg-white p-6 text-center subtle-shadow">
             <p className="mx-auto max-w-4xl text-lg leading-8 text-slate-700">
-              仙麗科技是一家专业纸业供应链服务商，以摄影背景纸为核心优势品类，服务全国渠道商、批发商、电商卖家和品牌客户。
+              仙麗科技是一家特种纸业供应链专业服务商，以专业背景纸为核心优势品类，服务全国渠道商、批发商、电商卖家和品牌客户。
             </p>
           </div>
         </Container>
@@ -51,10 +55,10 @@ export default function ExpoPage() {
           <SectionHeader eyebrow="Product Lines" title="四大产品线" align="center" />
           <div className="mt-10 grid gap-5 md:grid-cols-4">
             {[
-              { icon: Camera, title: "摄影背景纸" },
-              { icon: Palette, title: "彩卡卡纸" },
-              { icon: PackageCheck, title: "包装纸" },
-              { icon: Boxes, title: "文具用品纸" },
+              { icon: Camera, title: "专业背景纸" },
+              { icon: PackageCheck, title: "精品包装纸" },
+              { icon: Palette, title: "特种卡纸" },
+              { icon: Boxes, title: "文具封面纸" },
             ].map((item) => (
               <div key={item.title} className="rounded-lg border border-slate-200 bg-slate-50 p-5 text-center">
                 <item.icon className="mx-auto size-6 text-[#2F855A]" aria-hidden="true" />
