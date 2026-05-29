@@ -21,23 +21,23 @@ export function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-[#D6B46A]/18 bg-[#050505]/94 backdrop-blur">
-        <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-          <Link href="/" className="flex items-center gap-3.5" onClick={() => setOpen(false)}>
-            <span className="luxury-wordmark text-2xl font-semibold leading-none text-[#D6B46A] sm:text-3xl">
+        <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+          <Link href="/" className="flex shrink-0 items-center gap-3 whitespace-nowrap" onClick={() => setOpen(false)}>
+            <span className="luxury-wordmark whitespace-nowrap text-2xl font-semibold leading-none text-[#D6B46A] sm:text-3xl">
               仙麗科技
             </span>
-            <span className="hidden h-5 w-px bg-[#D6B46A]/42 sm:block" aria-hidden="true" />
-            <span className="hidden text-xs font-medium tracking-[0.18em] text-[#CFC6B8] sm:block">
+            <span className="hidden h-5 w-px bg-[#D6B46A]/42 xl:block" aria-hidden="true" />
+            <span className="hidden whitespace-nowrap text-[10px] font-medium tracking-[0.08em] text-[#CFC6B8] xl:block">
               彩卡特种纸供应链专业服务商
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-1 xl:flex" aria-label="主导航">
+          <nav className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 xl:flex" aria-label="主导航">
             {navigationItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative rounded-md px-2.5 py-2 text-sm font-medium transition ${
+                className={`relative whitespace-nowrap rounded-md px-2 py-2 text-[13px] font-medium leading-none transition ${
                   isActive(pathname, item.href)
                     ? "text-[#D6B46A] after:absolute after:inset-x-2 after:-bottom-1 after:h-px after:bg-[#D6B46A]"
                     : "text-[#CFC6B8] hover:text-[#F3EBDD]"
@@ -48,10 +48,10 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden items-center gap-3 xl:flex">
+          <div className="hidden shrink-0 items-center gap-3 xl:flex">
             <Link
               href="/channel-partners#apply"
-              className="rounded-md border border-[#D6B46A]/75 px-4 py-2.5 text-sm font-semibold text-[#D6B46A] transition hover:bg-[#D6B46A] hover:text-[#050505]"
+              className="whitespace-nowrap rounded-md border border-[#D6B46A]/75 px-3.5 py-2.5 text-[13px] font-semibold text-[#D6B46A] transition hover:bg-[#D6B46A] hover:text-[#050505]"
             >
               申请渠道合作
             </Link>
