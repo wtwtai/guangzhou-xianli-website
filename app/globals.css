@@ -1,14 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #1f2933;
-  --navy: #0b1f3a;
-  --graphite: #1f2933;
-  --paper: #f8fafc;
-  --line: #e5e7eb;
-  --green: #2f855a;
-  --copper: #b7791f;
+  --background: #0b0a08;
+  --foreground: #f4efe5;
+  --navy: #0b0a08;
+  --graphite: #17130d;
+  --paper: #11100d;
+  --line: rgba(201, 162, 74, 0.22);
+  --green: #c9a24a;
+  --copper: #d8be75;
+  --muted: #cfc6b8;
+  --panel: #12100c;
+  --panel-soft: #18150f;
 }
 
 @theme inline {
@@ -22,13 +25,14 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB",
-    "Noto Sans CJK SC", sans-serif;
+  color-scheme: dark;
+  font-family: "SF Pro Display", "Helvetica Neue", Arial, "Microsoft YaHei",
+    "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", sans-serif;
 }
 
 ::selection {
-  background: rgba(47, 133, 90, 0.2);
-  color: var(--navy);
+  background: rgba(216, 190, 117, 0.32);
+  color: #fff8e7;
 }
 
 a,
@@ -45,23 +49,144 @@ textarea {
 
 .paper-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(201, 162, 74, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 162, 74, 0.1) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
 .paper-lines {
   background-image: repeating-linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.1) 0,
-    rgba(255, 255, 255, 0.1) 1px,
+    rgba(201, 162, 74, 0.13) 0,
+    rgba(201, 162, 74, 0.13) 1px,
     transparent 1px,
     transparent 13px
   );
 }
 
 .subtle-shadow {
-  box-shadow: 0 18px 45px rgba(11, 31, 58, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(216, 190, 117, 0.05),
+    0 2px 12px rgba(0, 0, 0, 0.18);
+}
+
+.bg-white,
+.bg-white\/95 {
+  background-color: rgba(18, 16, 12, 0.96);
+}
+
+.bg-white\/10 {
+  background-color: rgba(201, 162, 74, 0.1);
+}
+
+.bg-slate-50,
+.bg-slate-100 {
+  background-color: var(--panel-soft);
+}
+
+.bg-amber-50,
+.bg-emerald-50 {
+  background-color: rgba(201, 162, 74, 0.11);
+}
+
+.border-slate-200,
+.border-slate-200\/80,
+.border-slate-300,
+.border-amber-200,
+.border-emerald-200,
+.border-white\/15,
+.border-white\/30 {
+  border-color: var(--line);
+}
+
+.ring-slate-200,
+.ring-amber-100,
+.ring-emerald-100,
+.ring-white\/20 {
+  --tw-ring-color: rgba(201, 162, 74, 0.24);
+}
+
+.text-slate-900,
+.text-slate-100 {
+  color: #f4efe5;
+}
+
+.text-slate-700,
+.text-slate-600,
+.text-slate-500 {
+  color: var(--muted);
+}
+
+.text-slate-400,
+.text-slate-300,
+.text-slate-200 {
+  color: #b9af9f;
+}
+
+.text-emerald-100 {
+  color: #f0d98c;
+}
+
+.shadow-sm {
+  box-shadow: inset 0 1px 0 rgba(216, 190, 117, 0.05);
+}
+
+[class~="bg-[#0B1F3A]"] {
+  background-color: #0b0a08;
+  color: #d8be75;
+}
+
+[class~="bg-[#2F855A]"] {
+  background-color: #d8be75;
+  color: #0b0a08;
+}
+
+[class~="text-[#0B1F3A]"],
+[class~="text-[#2F855A]"],
+[class~="text-[#B7791F]"],
+[class~="text-[#7C4A03]"] {
+  color: #d8be75;
+}
+
+[class~="hover:bg-[#12345d]"]:hover {
+  background-color: #1c1710;
+  color: #f0d98c;
+}
+
+[class~="hover:bg-[#276f4b]"]:hover {
+  background-color: #b8913e;
+  color: #0b0a08;
+}
+
+[class~="hover:text-[#0B1F3A]"]:hover,
+[class~="hover:text-[#2F855A]"]:hover {
+  color: #f0d98c;
+}
+
+[class~="hover:border-[#2F855A]"]:hover,
+[class~="hover:border-[#2F855A]/30"]:hover,
+.hover\:border-emerald-100:hover {
+  border-color: rgba(216, 190, 117, 0.5);
+}
+
+.hover\:bg-slate-50:hover,
+.hover\:bg-slate-100:hover,
+.hover\:bg-white\/10:hover {
+  background-color: rgba(201, 162, 74, 0.12);
+}
+
+input,
+select,
+textarea {
+  background-color: #0f0d0a;
+  border-color: var(--line);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #d8be75;
+  box-shadow: 0 0 0 2px rgba(216, 190, 117, 0.14);
 }
 
 @keyframes fade-up {

@@ -142,38 +142,38 @@ const partnerTypes = [
 export default function Home() {
   return (
     <>
-      <section className="relative isolate overflow-hidden bg-[#0B1F3A] text-white">
+      <section className="relative isolate overflow-hidden border-b border-[#C9A24A]/20 bg-[#0B0A08] text-[#F4EFE5]">
         <div className="absolute inset-0 paper-grid opacity-80" aria-hidden="true" />
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#F8FAFC] to-transparent" aria-hidden="true" />
+        <div className="absolute inset-x-0 bottom-0 h-px bg-[#C9A24A]/30" aria-hidden="true" />
         <Container className="relative grid min-h-[calc(100vh-72px)] items-center gap-12 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-20">
           <div className="fade-up">
-            <p className="mb-4 inline-flex rounded-md border border-white/15 px-3 py-1.5 text-sm font-semibold text-emerald-100">
+            <p className="mb-4 inline-flex rounded-md border border-[#C9A24A]/25 px-3 py-1.5 text-sm font-semibold text-[#D8BE75]">
               {siteConfig.name}｜{siteConfig.positioning}
             </p>
-            <h1 className="max-w-4xl text-4xl font-semibold tracking-normal sm:text-5xl lg:text-6xl">
+            <h1 className="max-w-4xl text-4xl font-semibold tracking-normal text-[#D8BE75] sm:text-5xl lg:text-6xl">
               专业纸业供应链服务商
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#CFC6B8]">
               专注摄影背景纸标准化、多品类纸品批发与全国渠道合作。仙麗科技以智能化加工、公开化品控标准和稳定供应链，帮助渠道客户降低采购风险，提升纸品销售效率。
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/products"
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-semibold text-[#0B1F3A] transition hover:bg-slate-100"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-[#D8BE75] px-5 py-3 text-sm font-semibold text-[#0B0A08] transition hover:bg-[#B8913E]"
               >
                 了解产品线
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
               <Link
                 href="/channel-partners#apply"
-                className="inline-flex items-center justify-center rounded-md border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-md border border-[#C9A24A]/35 px-5 py-3 text-sm font-semibold text-[#D8BE75] transition hover:bg-[#C9A24A]/10"
               >
                 申请渠道合作
               </Link>
             </div>
             <div className="mt-10 grid max-w-3xl gap-3 sm:grid-cols-4">
               {["专业背景纸", "标准化品控", "智能化加工", "全国渠道合作"].map((keyword) => (
-                <div key={keyword} className="rounded-md border border-white/15 bg-white/10 px-4 py-3 text-sm font-semibold text-slate-100">
+                <div key={keyword} className="rounded-md border border-[#C9A24A]/20 bg-[#C9A24A]/10 px-4 py-3 text-sm font-semibold text-[#F0D98C]">
                   {keyword}
                 </div>
               ))}
