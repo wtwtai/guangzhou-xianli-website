@@ -39,18 +39,18 @@ function LanguageLinks({
 
   if (mobile) {
     return (
-      <div className="mt-2 rounded-md border border-[#C8A96A]/20 bg-[#C8A96A]/5 p-3">
-        <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#C8A96A]">
-          <Globe2 className="size-4" aria-hidden="true" />
-          {languageLabel}
-        </div>
-        <div className="grid grid-cols-3 gap-2" aria-label="Language switcher">
+      <div className="mt-2 rounded-md border border-[#C8A96A]/20 bg-[#C8A96A]/5 p-3" aria-label="Language switcher">
+        <div className="flex flex-wrap items-center gap-2">
+          <div className="mr-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#C8A96A]">
+            <Globe2 className="size-4" aria-hidden="true" />
+            {languageLabel}
+          </div>
           {locales.map((item) => (
             <Link
               key={item}
               href={localizePath(currentPath, item)}
               onClick={onSelect}
-              className={`rounded-md px-3 py-2 text-center text-sm font-semibold transition ${
+              className={`inline-flex h-9 min-w-14 items-center justify-center rounded-md px-3 text-sm font-semibold transition ${
                 item === locale
                   ? "bg-[#C8A96A] text-[#101010]"
                   : "border border-[#C8A96A]/20 text-[#DAD3C5] hover:bg-[#C8A96A]/10 hover:text-[#FFF9EE]"
@@ -70,14 +70,14 @@ function LanguageLinks({
       <button
         type="button"
         onClick={() => setLanguageOpen((value) => !value)}
-        className="inline-flex h-10 items-center gap-2 rounded-md border border-[#C8A96A]/35 bg-[#C8A96A]/5 px-3 text-xs font-semibold text-[#DAD3C5] transition hover:border-[#C8A96A]/70 hover:text-[#FFF9EE]"
+        className="inline-flex size-10 items-center justify-center gap-1 rounded-md border border-[#C8A96A]/35 bg-[#C8A96A]/5 text-[#C8A96A] transition hover:border-[#C8A96A]/70 hover:bg-[#C8A96A]/10 hover:text-[#FFF9EE]"
         aria-haspopup="menu"
         aria-expanded={languageOpen}
+        aria-label={`${languageLabel}: ${localeLabels[locale].label}`}
       >
-        <Globe2 className="size-4 text-[#C8A96A]" aria-hidden="true" />
-        {localeLabels[locale].short}
+        <Globe2 className="size-4" aria-hidden="true" />
         <ChevronDown
-          className={`size-3.5 text-[#C8A96A] transition ${languageOpen ? "rotate-180" : ""}`}
+          className={`size-3 transition ${languageOpen ? "rotate-180" : ""}`}
           aria-hidden="true"
         />
       </button>
