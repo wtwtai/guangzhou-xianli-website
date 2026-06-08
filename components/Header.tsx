@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, MessageCircle, Phone, X } from "lucide-react";
+import { ChevronDown, Globe2, Menu, MessageCircle, Phone, X } from "lucide-react";
 import { useState } from "react";
 import {
   getLocaleFromPathname,
@@ -26,33 +26,87 @@ function isActive(pathname: string, href: string) {
 function LanguageLinks({
   locale,
   currentPath,
-  compact = false,
+  mobile = false,
+  onSelect,
 }: {
   locale: Locale;
   currentPath: string;
-  compact?: boolean;
+  mobile?: boolean;
+  onSelect?: () => void;
 }) {
+  const [languageOpen, setLanguageOpen] = useState(false);
+  const languageLabel = locale === "zh" ? "语言" : locale === "es" ? "Idioma" : "Language";
+
+  if (mobile) {
+    return (
+      <div className="mt-2 rounded-md border border-[#C8A96A]/20 bg-[#C8A96A]/5 p-3">
+        <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#C8A96A]">
+          <Globe2 className="size-4" aria-hidden="true" />
+          {languageLabel}
+        </div>
+        <div className="grid grid-cols-3 gap-2" aria-label="Language switcher">
+          {locales.map((item) => (
+            <Link
+              key={item}
+              href={localizePath(currentPath, item)}
+              onClick={onSelect}
+              className={`rounded-md px-3 py-2 text-center text-sm font-semibold transition ${
+                item === locale
+                  ? "bg-[#C8A96A] text-[#101010]"
+                  : "border border-[#C8A96A]/20 text-[#DAD3C5] hover:bg-[#C8A96A]/10 hover:text-[#FFF9EE]"
+              }`}
+              aria-current={item === locale ? "true" : undefined}
+            >
+              {localeLabels[item].short}
+            </Link>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div
-      className={`flex items-center rounded-md border border-[#C8A96A]/25 bg-[#C8A96A]/5 p-1 ${
-        compact ? "justify-center" : ""
-      }`}
-      aria-label="Language switcher"
-    >
-      {locales.map((item) => (
-        <Link
-          key={item}
-          href={localizePath(currentPath, item)}
-          className={`rounded px-2.5 py-1.5 text-xs font-semibold transition ${
-            item === locale
-              ? "bg-[#C8A96A] text-[#101010]"
-              : "text-[#DAD3C5] hover:bg-[#C8A96A]/10 hover:text-[#FFF9EE]"
-          }`}
-          aria-current={item === locale ? "true" : undefined}
-        >
-          {localeLabels[item].short}
-        </Link>
-      ))}
+    <div className="relative" aria-label="Language switcher">
+      <button
+        type="button"
+        onClick={() => setLanguageOpen((value) => !value)}
+        className="inline-flex h-10 items-center gap-2 rounded-md border border-[#C8A96A]/35 bg-[#C8A96A]/5 px-3 text-xs font-semibold text-[#DAD3C5] transition hover:border-[#C8A96A]/70 hover:text-[#FFF9EE]"
+        aria-haspopup="menu"
+        aria-expanded={languageOpen}
+      >
+        <Globe2 className="size-4 text-[#C8A96A]" aria-hidden="true" />
+        {localeLabels[locale].short}
+        <ChevronDown
+          className={`size-3.5 text-[#C8A96A] transition ${languageOpen ? "rotate-180" : ""}`}
+          aria-hidden="true"
+        />
+      </button>
+      <div
+        className={`absolute right-0 top-full z-50 mt-2 w-36 overflow-hidden rounded-md border border-[#C8A96A]/25 bg-[#101010] p-1.5 shadow-[0_18px_44px_rgba(0,0,0,0.35)] transition ${
+          languageOpen
+            ? "translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-1 opacity-0"
+        }`}
+        role="menu"
+      >
+        {locales.map((item) => (
+          <Link
+            key={item}
+            href={localizePath(currentPath, item)}
+            onClick={() => setLanguageOpen(false)}
+            className={`flex items-center justify-between rounded px-3 py-2 text-sm font-semibold transition ${
+              item === locale
+                ? "bg-[#C8A96A] text-[#101010]"
+                : "text-[#DAD3C5] hover:bg-[#C8A96A]/10 hover:text-[#FFF9EE]"
+            }`}
+            aria-current={item === locale ? "true" : undefined}
+            role="menuitem"
+          >
+            <span>{localeLabels[item].label}</span>
+            <span className="text-xs opacity-75">{localeLabels[item].short}</span>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
@@ -118,10 +172,13 @@ export function Header() {
 
         <div
           className={`overflow-hidden border-t border-[#C8A96A]/20 bg-[#101010] transition-all duration-200 2xl:hidden ${
-            open ? "max-h-[560px] opacity-100" : "max-h-0 opacity-0"
+            open ? "max-h-[calc(100dvh-72px)] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <nav className="mx-auto grid max-w-7xl gap-1 px-4 py-4 sm:px-6" aria-label="移动导航">
+          <nav
+            className="mx-auto grid max-w-7xl gap-1 overflow-y-auto px-4 py-4 pb-24 sm:px-6"
+            aria-label="移动导航"
+          >
             {navigationItems.map((item) => (
               <Link
                 key={item.href}
@@ -136,7 +193,12 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <LanguageLinks locale={locale} currentPath={currentPath} compact />
+            <LanguageLinks
+              locale={locale}
+              currentPath={currentPath}
+              mobile
+              onSelect={() => setOpen(false)}
+            />
             <Link
               href={localizePath("/channel-partners", locale)}
               onClick={() => setOpen(false)}
