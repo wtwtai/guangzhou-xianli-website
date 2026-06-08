@@ -171,14 +171,22 @@ export function Header() {
         </div>
 
         <div
-          className={`overflow-hidden border-t border-[#C8A96A]/20 bg-[#101010] transition-all duration-200 2xl:hidden ${
-            open ? "max-h-[calc(100dvh-72px)] opacity-100" : "max-h-0 opacity-0"
+          className={`border-t border-[#C8A96A]/20 bg-[#101010] transition-all duration-200 2xl:hidden ${
+            open
+              ? "max-h-[calc(100dvh-72px)] overflow-y-auto overscroll-contain opacity-100"
+              : "max-h-0 overflow-hidden opacity-0"
           }`}
         >
           <nav
-            className="mx-auto grid max-w-7xl gap-1 overflow-y-auto px-4 py-4 pb-24 sm:px-6"
+            className="mx-auto grid max-w-7xl gap-1 px-4 py-4 pb-24 sm:px-6"
             aria-label="移动导航"
           >
+            <LanguageLinks
+              locale={locale}
+              currentPath={currentPath}
+              mobile
+              onSelect={() => setOpen(false)}
+            />
             {navigationItems.map((item) => (
               <Link
                 key={item.href}
@@ -193,12 +201,6 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <LanguageLinks
-              locale={locale}
-              currentPath={currentPath}
-              mobile
-              onSelect={() => setOpen(false)}
-            />
             <Link
               href={localizePath("/channel-partners", locale)}
               onClick={() => setOpen(false)}
