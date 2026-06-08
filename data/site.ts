@@ -139,6 +139,9 @@ export function createPageMetadata({
   description: string;
   path: string;
 }): Metadata {
+  const enPath = path === "/" ? "/en" : `/en${path}`;
+  const esPath = path === "/" ? "/es" : `/es${path}`;
+
   return {
     title,
     description,
@@ -146,6 +149,8 @@ export function createPageMetadata({
       canonical: path,
       languages: {
         "zh-CN": path,
+        en: enPath,
+        es: esPath,
       },
     },
     openGraph: {

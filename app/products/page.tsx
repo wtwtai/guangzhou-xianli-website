@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Camera, FileText, PackageCheck, Palette } from "lucide-react";
 import { Container } from "@/components/Container";
 import { CTASection } from "@/components/CTASection";
@@ -99,18 +100,18 @@ export default function ProductsPage() {
                       ))}
                     </div>
                     <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                      <a
+                      <Link
                         href="/contact"
                         className="inline-flex items-center justify-center rounded-md bg-[#2F855A] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#276f4b]"
                       >
                         咨询产品
-                      </a>
-                      <a
+                      </Link>
+                      <Link
                         href="/resources"
                         className="inline-flex items-center justify-center rounded-md border border-slate-300 px-5 py-3 text-sm font-semibold text-[#0B1F3A] transition hover:border-[#2F855A] hover:text-[#2F855A]"
                       >
                         获取目录
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
