@@ -108,7 +108,7 @@ export function ContactForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className="subtle-shadow grid gap-5 rounded-lg border border-[#D6B46A]/20 bg-[#0E0C09] p-5 sm:grid-cols-2 sm:p-6"
+      className="subtle-shadow grid gap-5 rounded-lg border border-[#C8A96A]/24 bg-white/95 p-5 sm:grid-cols-2 sm:p-6"
       noValidate
     >
       {fields.map((field) => {
@@ -117,9 +117,9 @@ export function ContactForm({
 
         return (
           <div key={field.name} className={fieldClass}>
-            <label htmlFor={id} className="text-sm font-semibold text-[#D6B46A]">
+            <label htmlFor={id} className="text-sm font-semibold text-[#202020]">
               {field.label}
-              {field.required ? <span className="text-[#F3EBDD]"> *</span> : null}
+              {field.required ? <span className="text-[#9B7330]"> *</span> : null}
             </label>
             {field.type === "textarea" ? (
               <textarea
@@ -129,7 +129,7 @@ export function ContactForm({
                 placeholder={field.placeholder}
                 rows={4}
                 aria-invalid={Boolean(errors[field.name])}
-                className="mt-2 w-full rounded-md border border-[#D6B46A]/25 bg-[#0F0D0A] px-3 py-2.5 text-sm text-[#F3EBDD] transition placeholder:text-[#8F8678] focus:border-[#D6B46A] focus:ring-2 focus:ring-[#D6B46A]/15"
+                className="mt-2 w-full rounded-md border border-[#C8A96A]/25 bg-[#FFFDF8] px-3 py-2.5 text-sm text-[#202020] transition placeholder:text-[#9A9288] focus:border-[#C8A96A] focus:ring-2 focus:ring-[#C8A96A]/15"
               />
             ) : field.type === "select" ? (
               <select
@@ -137,7 +137,7 @@ export function ContactForm({
                 value={values[field.name]}
                 onChange={(event) => updateValue(field.name, event.target.value)}
                 aria-invalid={Boolean(errors[field.name])}
-                className="mt-2 w-full rounded-md border border-[#D6B46A]/25 bg-[#0F0D0A] px-3 py-2.5 text-sm text-[#F3EBDD] transition focus:border-[#D6B46A] focus:ring-2 focus:ring-[#D6B46A]/15"
+                className="mt-2 w-full rounded-md border border-[#C8A96A]/25 bg-[#FFFDF8] px-3 py-2.5 text-sm text-[#202020] transition focus:border-[#C8A96A] focus:ring-2 focus:ring-[#C8A96A]/15"
               >
                 <option value="">请选择</option>
                 {field.options?.map((option) => (
@@ -153,7 +153,7 @@ export function ContactForm({
                 onChange={(event) => updateValue(field.name, event.target.value)}
                 placeholder={field.placeholder}
                 aria-invalid={Boolean(errors[field.name])}
-                className="mt-2 w-full rounded-md border border-[#D6B46A]/25 bg-[#0F0D0A] px-3 py-2.5 text-sm text-[#F3EBDD] transition placeholder:text-[#8F8678] focus:border-[#D6B46A] focus:ring-2 focus:ring-[#D6B46A]/15"
+                className="mt-2 w-full rounded-md border border-[#C8A96A]/25 bg-[#FFFDF8] px-3 py-2.5 text-sm text-[#202020] transition placeholder:text-[#9A9288] focus:border-[#C8A96A] focus:ring-2 focus:ring-[#C8A96A]/15"
               />
             )}
             {errors[field.name] ? (
@@ -166,13 +166,13 @@ export function ContactForm({
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#D6B46A] px-5 py-3 text-sm font-semibold text-[#050505] transition hover:bg-[#B8913E] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#101010] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#2A2A2A] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
         >
           {status === "submitting" ? "提交中..." : submitLabel}
           <Send className="size-4" aria-hidden="true" />
         </button>
         {status === "success" ? (
-          <p className="mt-4 rounded-md border border-[#D6B46A]/25 bg-[#D6B46A]/10 px-4 py-3 text-sm font-medium text-[#D6B46A]">
+          <p className="mt-4 rounded-md border border-[#C8A96A]/25 bg-[#C8A96A]/10 px-4 py-3 text-sm font-medium text-[#7A5B20]">
             {successMessage}
           </p>
         ) : null}

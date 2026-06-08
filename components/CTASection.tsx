@@ -18,21 +18,21 @@ export function CTASection({
   secondaryHref?: string;
 }) {
   return (
-    <section className="border-y border-[#D6B46A]/20 bg-[#050505] py-16 text-[#F3EBDD] sm:py-20">
+    <section className="border-y border-[#C8A96A]/24 bg-[#101010] py-16 text-[#FFF9EE] sm:py-20">
       <Container>
         <div className="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
           <div>
-            <h2 className="luxury-heading text-3xl font-semibold tracking-normal text-[#D6B46A] sm:text-4xl">
+            <h2 className="luxury-heading text-3xl font-semibold tracking-normal text-[#C8A96A] sm:text-4xl">
               {title}
             </h2>
-            <p className="mt-4 max-w-3xl text-base leading-8 text-[#CFC6B8]">
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[#DAD3C5]">
               {description}
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
               href={primaryHref}
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-[#D6B46A] px-5 py-3 text-sm font-semibold text-[#050505] transition hover:bg-[#B8913E]"
+              className="inline-flex items-center justify-center gap-2 rounded-md bg-[#C8A96A] px-5 py-3 text-sm font-semibold text-[#101010] transition hover:bg-[#B8913E]"
             >
               {primaryLabel}
               <ArrowRight className="size-4" aria-hidden="true" />
@@ -40,7 +40,7 @@ export function CTASection({
             {secondaryLabel && secondaryHref ? (
               <Link
                 href={secondaryHref}
-                className="inline-flex items-center justify-center rounded-md border border-[#D6B46A]/35 px-5 py-3 text-sm font-semibold text-[#D6B46A] transition hover:bg-[#D6B46A]/10"
+                className="inline-flex items-center justify-center rounded-md border border-[#C8A96A]/35 px-5 py-3 text-sm font-semibold text-[#C8A96A] transition hover:bg-[#C8A96A]/10"
               >
                 {secondaryLabel}
               </Link>

@@ -152,54 +152,68 @@ const partnerTypes = [
 export default function Home() {
   return (
     <>
-      <section className="relative isolate overflow-hidden border-b border-[#D6B46A]/20 bg-[#050505] text-[#F3EBDD]">
-        <Image
-          src="/brand-assets/xianli-hero-british-luxury.png"
-          alt="英式黑金彩卡特种纸供应链产品视觉"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover opacity-90"
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,5,5,0.98)_0%,rgba(5,5,5,0.9)_24%,rgba(5,5,5,0.34)_62%,rgba(5,5,5,0.1)_100%)]" aria-hidden="true" />
-        <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(5,5,5,0.96)_0%,rgba(5,5,5,0.24)_30%,rgba(5,5,5,0.3)_100%)]" aria-hidden="true" />
+      <section className="relative isolate overflow-hidden border-b border-[#C8A96A]/24 bg-[#FBFAF7] text-[#202020]">
+        <div className="absolute inset-0 paper-grid opacity-70" aria-hidden="true" />
+        <div className="absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_center,rgba(200,169,106,0.22),transparent_58%)]" aria-hidden="true" />
         <Container className="relative flex min-h-[calc(100svh-72px)] flex-col justify-end py-10 sm:py-12 lg:py-14">
-          <div className="fade-up max-w-4xl pb-8 pt-20 sm:pt-28 lg:pt-36">
-            <p className="mb-5 inline-flex rounded-md border border-[#D6B46A]/30 bg-[#050505]/45 px-3 py-1.5 text-sm font-semibold tracking-[0.12em] text-[#D6B46A] backdrop-blur">
-              {siteConfig.name}｜{siteConfig.positioning}
-            </p>
-            <h1 className="luxury-heading text-5xl font-semibold leading-tight tracking-normal text-[#D6B46A] sm:text-6xl lg:text-7xl">
-              彩卡特种纸供应链专业服务商
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#F3EBDD]">
-              深耕彩卡特种纸全链・自有产能・先进设备・ISO 国际认证・FSC、PEFC 森林认证
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/products"
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-[#D6B46A] px-6 py-3 text-sm font-semibold text-[#050505] transition hover:bg-[#B8913E]"
-              >
-                了解产品线
-                <ArrowRight className="size-4" aria-hidden="true" />
-              </Link>
-              <Link
-                href="/channel-partners#apply"
-                className="inline-flex items-center justify-center rounded-md border border-[#D6B46A]/55 bg-[#050505]/28 px-6 py-3 text-sm font-semibold text-[#D6B46A] backdrop-blur transition hover:bg-[#D6B46A]/10"
-              >
-                申请渠道合作
-              </Link>
+          <div className="grid flex-1 items-center gap-10 pt-20 lg:grid-cols-[0.92fr_1.08fr] lg:pt-24">
+            <div className="fade-up max-w-3xl">
+              <p className="mb-5 inline-flex rounded-md border border-[#C8A96A]/35 bg-white/70 px-3 py-1.5 text-sm font-semibold tracking-[0.12em] text-[#9B7330] backdrop-blur">
+                {siteConfig.name}｜{siteConfig.positioning}
+              </p>
+              <h1 className="luxury-heading text-5xl font-semibold leading-tight tracking-normal text-[#202020] sm:text-6xl lg:text-7xl">
+                彩卡特种纸供应链专业服务商
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-[#64615C]">
+                深耕彩卡特种纸全链・自有产能・先进设备・ISO 国际认证・FSC、PEFC 森林认证
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="/products"
+                  className="inline-flex items-center justify-center gap-2 rounded-md bg-[#101010] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#2A2A2A]"
+                >
+                  了解产品线
+                  <ArrowRight className="size-4" aria-hidden="true" />
+                </Link>
+                <Link
+                  href="/channel-partners#apply"
+                  className="inline-flex items-center justify-center rounded-md border border-[#C8A96A]/55 bg-white/65 px-6 py-3 text-sm font-semibold text-[#9B7330] backdrop-blur transition hover:bg-[#C8A96A]/10"
+                >
+                  申请渠道合作
+                </Link>
+              </div>
+            </div>
+
+            <div className="fade-up">
+              <figure className="subtle-shadow relative min-h-[360px] overflow-hidden rounded-lg border border-[#C8A96A]/35 bg-[#101010] sm:min-h-[460px] lg:min-h-[560px]">
+                <Image
+                  src="/brand-assets/xianli-hero-british-luxury.png"
+                  alt="英式黑金彩卡特种纸供应链产品视觉"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 54vw, 100vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,5,5,0.62),rgba(5,5,5,0.08))]" aria-hidden="true" />
+                <figcaption className="absolute left-6 top-6 rounded-md border border-[#C8A96A]/35 bg-[#101010]/60 px-4 py-3 text-xs font-semibold tracking-[0.18em] text-[#C8A96A] backdrop-blur">
+                  STANDARD · SUPPLY · QUALITY
+                </figcaption>
+                <p className="luxury-heading absolute bottom-6 left-6 max-w-sm text-3xl font-semibold tracking-[0.08em] text-[#FFF9EE] sm:text-4xl">
+                  SPECIAL PAPER SOLUTIONS
+                </p>
+              </figure>
             </div>
           </div>
 
-          <div className="fade-up grid gap-3 pb-1 md:grid-cols-2 xl:grid-cols-4">
+          <div className="fade-up mt-10 grid gap-3 pb-1 md:grid-cols-2 xl:grid-cols-4">
             {heroKeywords.map((item) => (
-              <div key={item.title} className="flex items-center gap-4 rounded-lg border border-[#D6B46A]/28 bg-[#050505]/70 p-4 backdrop-blur">
-                <span className="flex size-12 shrink-0 items-center justify-center rounded-full border border-[#D6B46A]/35 text-[#D6B46A]">
+              <div key={item.title} className="subtle-shadow flex items-center gap-4 rounded-lg border border-[#C8A96A]/24 bg-white/88 p-4 backdrop-blur">
+                <span className="flex size-12 shrink-0 items-center justify-center rounded-full border border-[#C8A96A]/30 text-[#9B7330]">
                   <item.icon className="size-5" aria-hidden="true" />
                 </span>
                 <span>
-                  <span className="block text-base font-semibold text-[#F3EBDD]">{item.title}</span>
-                  <span className="mt-1 block text-xs font-medium tracking-[0.08em] text-[#CFC6B8]">{item.text}</span>
+                  <span className="block text-base font-semibold text-[#202020]">{item.title}</span>
+                  <span className="mt-1 block text-xs font-medium tracking-[0.08em] text-[#64615C]">{item.text}</span>
                 </span>
               </div>
             ))}
