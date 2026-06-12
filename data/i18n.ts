@@ -67,7 +67,7 @@ export function localizePath(path: string, locale: Locale) {
 export const localizedNavigation: Record<Locale, { label: string; href: RoutePath }[]> = {
   zh: [
     { label: "首页", href: "/" },
-    { label: "关于仙麗", href: "/about" },
+    { label: "关于仙丽", href: "/about" },
     { label: "专业背景纸", href: "/backdrop-paper" },
     { label: "产品中心", href: "/products" },
     { label: "标准与品控", href: "/quality-standards" },
@@ -118,7 +118,7 @@ export const localizedUi = {
     addressLabel: "地址",
     footerTagline: "SPECIAL PAPER SUPPLY",
     footerDescription: "深耕彩卡特种纸全链，依托自有产能、先进设备与认证体系服务全国渠道客户。",
-    copyright: `© ${new Date().getFullYear()} 仙麗科技。保留所有权利。`,
+    copyright: `© ${new Date().getFullYear()} 仙丽科技。保留所有权利。`,
     details: "查看详情",
     contactToGet: "联系获取",
   },
@@ -394,10 +394,9 @@ export const localizedPages: Record<NonDefaultLocale, Record<RoutePath, Localize
           description:
             "Xianli continues improving environmental testing and certification documents to give customers clearer sourcing evidence.",
           items: [
-            { title: "FSC", description: "Responsible paper sourcing." },
-            { title: "SGS", description: "Third-party testing support." },
-            { title: "REACH", description: "Environmental compliance." },
-            { title: "RoHS", description: "Material safety support." },
+            { title: "ISO Quality System", description: "Quality management and process documentation." },
+            { title: "FSC Forest Certification", description: "Responsible forest sourcing support." },
+            { title: "PEFC Forest Certification", description: "Sustainable forest certification support." },
           ],
         },
       ],
@@ -688,11 +687,9 @@ export const localizedPages: Record<NonDefaultLocale, Record<RoutePath, Localize
           title: "Certification Display",
           description: "Display areas are prepared for later certificate files.",
           items: [
-            { title: "FSC", description: "Responsible paper sourcing." },
-            { title: "SGS", description: "Third-party testing." },
-            { title: "REACH", description: "Environmental compliance." },
-            { title: "RoHS", description: "Material safety." },
-            { title: "MSDS", description: "Material safety data." },
+            { title: "ISO Quality System", description: "Quality management system documentation." },
+            { title: "FSC Forest Certification", description: "Responsible forest sourcing documentation." },
+            { title: "PEFC Forest Certification", description: "Sustainable forest certification documentation." },
           ],
         },
         {
@@ -1306,11 +1303,9 @@ const spanishPageOverrides: Partial<Record<RoutePath, LocalizedPage>> = {
         title: "Área de Exhibición de Certificados",
         description: "Los espacios están preparados para incorporar archivos reales de certificados.",
         items: [
-          { title: "FSC", description: "Origen responsable del papel." },
-          { title: "SGS", description: "Soporte de ensayo de terceros." },
-          { title: "REACH", description: "Cumplimiento ambiental." },
-          { title: "RoHS", description: "Seguridad de materiales." },
-          { title: "MSDS", description: "Ficha de seguridad de materiales." },
+          { title: "Sistema de Calidad ISO", description: "Documentos del sistema de gestión de calidad." },
+          { title: "Certificación Forestal FSC", description: "Documentos sobre origen forestal responsable." },
+          { title: "Certificación Forestal PEFC", description: "Documentos de certificación forestal sostenible." },
         ],
       },
       {

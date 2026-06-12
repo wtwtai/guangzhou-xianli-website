@@ -54,7 +54,7 @@ export default function QualityStandardsPage() {
     <>
       <PageHero
         eyebrow="Quality Standards"
-        title="仙麗彩卡特种纸标准化品控体系"
+        title="仙丽彩卡特种纸标准化品控体系"
         description="让彩卡特种纸采购从经验判断，走向清晰、可检查、可追溯的标准化流程。"
       >
         <ImagePlaceholder label="后期替换：标准与品控流程图片" kind="standard" />
@@ -69,7 +69,7 @@ export default function QualityStandardsPage() {
               description="彩卡特种纸看似简单，但在实际应用中会受到颜色、纹理、触感、加工精度、运输压痕、包装保护等因素影响。"
             />
             <div className="rounded-lg border border-slate-200 bg-white p-6 text-base leading-8 text-slate-700 subtle-shadow">
-              仙麗科技围绕使用场景、用户需求，从原料到成品全流程管控，帮助渠道客户降低采购风险，提高产品销售稳定性。清晰的品控标准也便于客户培训销售团队、处理售后问题和管理长期供货。
+              仙丽科技围绕使用场景、用户需求，从原料到成品全流程管控，帮助渠道客户降低采购风险，提高产品销售稳定性。清晰的品控标准也便于客户培训销售团队、处理售后问题和管理长期供货。
             </div>
           </div>
         </Container>
@@ -96,6 +96,11 @@ export default function QualityStandardsPage() {
           />
           <div className="mt-12">
             <ProcessSteps steps={steps} />
+          </div>
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {["标准与品控流程图片 1", "标准与品控流程图片 2", "标准与品控流程图片 3"].map((label) => (
+              <ImagePlaceholder key={label} label={`后期替换：${label}`} kind="standard" className="min-h-56" />
+            ))}
           </div>
           <div className="mt-10 rounded-lg border border-slate-200 bg-white p-6">
             <FileText className="size-6 text-[#2F855A]" aria-hidden="true" />

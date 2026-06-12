@@ -30,7 +30,7 @@ export default function ExpoPage() {
     <>
       <PageHero
         eyebrow="Expo Quick Page"
-        title="欢迎了解仙麗科技纸品解决方案"
+        title="欢迎了解仙丽科技纸品解决方案"
         description="专注彩卡特种纸供应链与专业背景纸批发，为渠道客户提供稳定、标准化、可持续合作的纸品供应。"
       >
         <ImagePlaceholder
@@ -44,7 +44,7 @@ export default function ExpoPage() {
         <Container>
           <div className="rounded-lg border border-slate-200 bg-white p-6 text-center subtle-shadow">
             <p className="mx-auto max-w-4xl text-lg leading-8 text-slate-700">
-              仙麗科技是一家彩卡特种纸供应链专业服务商，深耕彩卡特种纸全链，服务全国渠道商、批发商、电商卖家和品牌客户。
+              仙丽科技是一家彩卡特种纸供应链专业服务商，深耕彩卡特种纸全链，服务全国渠道商、批发商、电商卖家和品牌客户。
             </p>
           </div>
         </Container>

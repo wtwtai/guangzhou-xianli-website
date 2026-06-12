@@ -57,7 +57,7 @@ export default function CertificationsPage() {
       <section className="bg-white py-20 sm:py-24">
         <Container>
           <SectionHeader eyebrow="Certificates" title="认证展示" align="center" />
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
             {certifications.map((cert) => (
               <article key={cert.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <ImagePlaceholder label={`后期替换：${cert.title} 证书图片`} kind="certificate" className="min-h-52" />

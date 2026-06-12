@@ -42,6 +42,8 @@ export default function ProductsPage() {
             title="四大彩卡特种纸产品线｜彩卡特种纸供应链一站式服务"
             description="面向渠道商、批发商、电商卖家、摄影器材渠道、文具渠道和品牌客户，提供可组合的彩卡特种纸供应方案。"
             align="center"
+            className="max-w-none"
+            titleClassName="lg:whitespace-nowrap lg:text-3xl xl:text-4xl"
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {productLines.map((product, index) => (

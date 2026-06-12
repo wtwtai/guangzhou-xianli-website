@@ -85,8 +85,8 @@ export default function ChannelPartnersPage() {
     <>
       <PageHero
         eyebrow="Channel Partners"
-        title="成为仙麗彩卡特种纸渠道合作伙伴"
-        description="与仙麗一起，把标准化彩卡特种纸带给更多摄影、文具、包装与批发市场客户。"
+        title="成为仙丽彩卡特种纸渠道合作伙伴"
+        description="与仙丽一起，把标准化彩卡特种纸带给更多摄影、文具、包装与批发市场客户。"
       >
         <ImagePlaceholder
           label="特种纸品渠道合作产品视觉"
@@ -97,7 +97,7 @@ export default function ChannelPartnersPage() {
 
       <section className="py-20 sm:py-24">
         <Container>
-          <SectionHeader eyebrow="Why Xianli" title="为什么选择仙麗" align="center" />
+          <SectionHeader eyebrow="Why Xianli" title="为什么选择仙丽" align="center" />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {reasons.map((reason, index) => {
               const icons = [Boxes, PackageCheck, ShieldCheck, Users];

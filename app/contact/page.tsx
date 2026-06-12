@@ -32,7 +32,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="联系我们"
-        description="欢迎渠道商、批发商、品牌客户与展会采购客户联系仙麗科技。"
+        description="欢迎渠道商、批发商、品牌客户与展会采购客户联系仙丽科技。"
       >
         <ImagePlaceholder
           label="彩卡特种纸供应链洽谈视觉"
@@ -96,7 +96,7 @@ export default function ContactPage() {
 
       <CTASection
         title="欢迎获取产品、样品与合作政策"
-        description="告诉我们您的采购目标和渠道类型，仙麗科技将提供更匹配的纸品供应方案。"
+        description="告诉我们您的采购目标和渠道类型，仙丽科技将提供更匹配的纸品供应方案。"
         primaryLabel="申请渠道合作"
         primaryHref="/channel-partners#apply"
         secondaryLabel="进入资料中心"

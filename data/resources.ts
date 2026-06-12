@@ -1,7 +1,7 @@
 export const resources = [
   {
     title: "公司介绍 PDF",
-    description: "了解仙麗科技彩卡特种纸供应链定位、能力与合作方向。",
+    description: "了解仙丽科技彩卡特种纸供应链定位、能力与合作方向。",
     status: "资料整理中",
   },
   {

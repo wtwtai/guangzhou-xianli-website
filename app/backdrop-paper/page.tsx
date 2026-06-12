@@ -146,7 +146,7 @@ export default function BackdropPaperPage() {
 
       <CTASection
         title="需要背景纸样品或批发报价？"
-        description="告诉我们您的渠道类型、销售区域和目标规格，仙麗科技会提供更适合的背景纸合作建议。"
+        description="告诉我们您的渠道类型、销售区域和目标规格，仙丽科技会提供更适合的背景纸合作建议。"
         primaryLabel="申请背景纸样品"
         primaryHref="/contact"
         secondaryLabel="获取批发报价"

@@ -52,7 +52,7 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About Xianli"
-        title="关于仙麗科技"
+        title="关于仙丽科技"
         description="以彩卡特种纸供应链能力，服务全国渠道客户与特种纸品市场。"
       >
         <ImagePlaceholder
@@ -68,7 +68,7 @@ export default function AboutPage() {
             <SectionHeader
               eyebrow="Company Profile"
               title="公司介绍"
-              description="仙麗科技是一家专注彩卡特种纸供应链服务的企业，深耕彩卡特种纸全链，连接优质纸品资源、自有产能、先进设备与全国渠道市场。"
+              description="仙丽科技是一家专注彩卡特种纸供应链服务的企业，深耕彩卡特种纸全链，连接优质纸品资源、自有产能、先进设备与全国渠道市场。"
             />
             <div className="rounded-lg border border-slate-200 bg-white p-6 text-base leading-8 text-slate-700 subtle-shadow">
               我们围绕彩卡特种纸、专业背景纸、精品包装纸、特种卡纸、文具封面纸等产品线，为渠道商、批发商、电商卖家、摄影器材渠道与品牌客户提供稳定、标准化、可持续合作的供应链解决方案。
@@ -136,8 +136,8 @@ export default function AboutPage() {
       </section>
 
       <CTASection
-        title="与仙麗建立长期纸品合作"
-        description="欢迎渠道商、批发商、品牌客户与展会采购客户联系仙麗科技，获取产品资料、样品和合作政策。"
+        title="与仙丽建立长期纸品合作"
+        description="欢迎渠道商、批发商、品牌客户与展会采购客户联系仙丽科技，获取产品资料、样品和合作政策。"
         primaryLabel="联系我们"
         primaryHref="/contact"
       />

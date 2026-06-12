@@ -16,7 +16,7 @@ export default function ResourcesPage() {
       <PageHero
         eyebrow="Resources"
         title="资料中心"
-        description="获取仙麗科技彩卡特种纸产品、标准、认证与渠道合作资料。"
+        description="获取仙丽科技彩卡特种纸产品、标准、认证与渠道合作资料。"
       >
         <ImagePlaceholder
           label="产品资料与目录封面视觉"
@@ -30,7 +30,7 @@ export default function ResourcesPage() {
           <SectionHeader
             eyebrow="Downloads"
             title="彩卡特种纸产品、标准、认证与合作资料"
-            description="下载按钮先做占位，后期可替换为真实 PDF 链接、文件下载接口或资料申请流程。"
+            description="资料中心统一归集管理公司简介、产品目录、背景纸参数规格、色卡样本、渠道合作政策及各类环保认证文件，方便参展洽谈与合作经销商快速查阅调取资料。"
             align="center"
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

@@ -124,8 +124,16 @@ export function Header() {
       <header className="sticky top-0 z-50 border-b border-[#C8A96A]/18 bg-[#101010]/94 backdrop-blur">
         <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
           <Link href={localizePath("/", locale)} className="flex shrink-0 items-center gap-3 whitespace-nowrap" onClick={() => setOpen(false)}>
+            <span
+              className="relative flex size-10 shrink-0 items-center justify-center rounded-md border border-[#C8A96A]/55 bg-[#C8A96A]/10 text-[#C8A96A] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]"
+              aria-hidden="true"
+            >
+              <span className="luxury-wordmark text-lg font-semibold leading-none">仙</span>
+              <span className="absolute bottom-1.5 left-1.5 h-px w-3 bg-[#C8A96A]/70" />
+              <span className="absolute right-1.5 top-1.5 h-3 w-px bg-[#C8A96A]/70" />
+            </span>
             <span className="luxury-wordmark whitespace-nowrap text-2xl font-semibold leading-none text-[#C8A96A] sm:text-3xl">
-              仙麗科技
+              仙丽科技
             </span>
             <span className="hidden h-5 w-px bg-[#C8A96A]/42 2xl:block" aria-hidden="true" />
             <span className="hidden whitespace-nowrap text-[10px] font-medium tracking-[0.08em] text-[#DAD3C5] 2xl:block">

@@ -226,7 +226,7 @@ export default function Home() {
           <SectionHeader
             eyebrow="Company Positioning"
             title="不止彩卡特种纸供应，更是供应链专业服务商"
-            description="仙麗科技围绕特种纸品的采购、加工、品控、包装、渠道销售和长期供货，建立更适合批发客户与渠道商的纸品服务体系。"
+            description="仙丽科技围绕特种纸品的采购、加工、品控、包装、渠道销售和长期供货，建立更适合批发客户与渠道商的纸品服务体系。"
             align="center"
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -246,7 +246,7 @@ export default function Home() {
           <SectionHeader
             eyebrow="Core Advantages"
             title="为什么客户选择仙丽｜彩卡特种纸业供应链专业服务商"
-            description="围绕彩卡特种纸供应链、规模化产能、智能设备与认证体系，仙麗科技为长期合作客户提供更稳定的产品和服务基础。"
+            description="围绕彩卡特种纸供应链、规模化产能、智能设备与认证体系，仙丽科技为长期合作客户提供更稳定的产品和服务基础。"
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {advantages.map((advantage) => (
@@ -264,7 +264,7 @@ export default function Home() {
               <SectionHeader
                 eyebrow="Smart Processing"
                 title="智能化生产｜彩卡特种纸交付更高效"
-                description="仙麗科技持续优化彩卡特种纸加工设备与流程，让规格化生产、精细加工、包装保护和批量交付更加稳定。"
+                description="仙丽科技持续优化彩卡特种纸加工设备与流程，让规格化生产、精细加工、包装保护和批量交付更加稳定。"
               />
               <ul className="mt-8 space-y-4">
                 {smartList.map((item) => (
@@ -320,6 +320,8 @@ export default function Home() {
             title="四大彩卡特种纸产品线｜彩卡特种纸供应链一站式服务"
             description="以彩卡特种纸供应链为核心，向专业背景纸、精品包装纸、特种卡纸、文具封面纸等产品组合延伸。"
             align="center"
+            className="max-w-none"
+            titleClassName="lg:whitespace-nowrap lg:text-3xl xl:text-4xl"
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {productLines.map((product, index) => (
@@ -356,8 +358,8 @@ export default function Home() {
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
             </div>
-            <div className="grid gap-5 sm:grid-cols-2">
-              {certifications.slice(0, 4).map((cert) => (
+            <div className="grid gap-5 sm:grid-cols-3">
+              {certifications.map((cert) => (
                 <article key={cert.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                   <ImagePlaceholder label={`后期替换：${cert.title} 证书图片`} kind="certificate" className="min-h-56" />
                   <h3 className="mt-4 text-lg font-semibold text-[#0B1F3A]">{cert.title}</h3>
@@ -403,7 +405,7 @@ export default function Home() {
           <SectionHeader
             eyebrow="Resources"
             title="获取仙丽彩卡特种纸资料"
-            description="资料中心会集中维护公司介绍、产品目录、背景纸规格表、色卡、渠道政策与环保认证资料，便于展会和渠道客户快速获取。"
+            description="资料中心统一归集管理公司简介、产品目录、背景纸参数规格、色卡样本、渠道合作政策及各类环保认证文件，方便参展洽谈与合作经销商快速查阅调取资料。"
             align="center"
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

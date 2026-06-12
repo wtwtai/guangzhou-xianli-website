@@ -1,6 +1,6 @@
 export const navigationItems = [
   { label: "首页", href: "/" },
-  { label: "关于仙麗", href: "/about" },
+  { label: "关于仙丽", href: "/about" },
   { label: "专业背景纸", href: "/backdrop-paper" },
   { label: "产品中心", href: "/products" },
   { label: "标准与品控", href: "/quality-standards" },

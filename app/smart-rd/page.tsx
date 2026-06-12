@@ -41,7 +41,7 @@ export default function SmartRdPage() {
             <SectionHeader
               eyebrow="Processing Value"
               title="智能化加工的价值"
-              description="彩卡特种纸不仅需要稳定纸张资源，也需要稳定的加工与包装能力。仙麗科技持续优化加工设备与流程，提升产品规格一致性、交付效率和定制响应速度。"
+              description="彩卡特种纸不仅需要稳定纸张资源，也需要稳定的加工与包装能力。仙丽科技持续优化加工设备与流程，提升产品规格一致性、交付效率和定制响应速度。"
             />
             <div className="grid gap-5 sm:grid-cols-2">
               {valueCards.map((card) => (
