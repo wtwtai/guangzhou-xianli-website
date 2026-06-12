@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
@@ -24,16 +25,14 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr] lg:px-8">
         <div>
           <div className="flex items-center gap-3">
-            <span
-              className="relative flex size-10 shrink-0 items-center justify-center rounded-md border border-[#C8A96A]/55 bg-[#C8A96A]/10 text-[#C8A96A]"
-              aria-hidden="true"
-            >
-              <span className="luxury-wordmark text-lg font-semibold leading-none">仙</span>
-              <span className="absolute bottom-1.5 left-1.5 h-px w-3 bg-[#C8A96A]/70" />
-              <span className="absolute right-1.5 top-1.5 h-3 w-px bg-[#C8A96A]/70" />
-            </span>
-            <span className="luxury-wordmark text-3xl font-semibold leading-none text-[#C8A96A]">
-              仙丽科技
+            <span className="flex h-14 w-[116px] shrink-0 items-center justify-center rounded-md border border-[#C8A96A]/35 bg-[#FFF9EE] p-2">
+              <Image
+                src="/brand-assets/xianli-logo.jpeg"
+                alt="仙丽科技 LOGO"
+                width={205}
+                height={106}
+                className="h-full w-full object-contain"
+              />
             </span>
             <span className="h-5 w-px bg-[#C8A96A]/35" aria-hidden="true" />
             <span className="text-xs tracking-[0.16em] text-[#DAD3C5]">
