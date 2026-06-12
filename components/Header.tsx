@@ -118,11 +118,12 @@ export function Header() {
   const currentPath = stripLocaleFromPathname(pathname);
   const navigationItems = localizedNavigation[locale];
   const ui = localizedUi[locale];
+  const desktopMode = locale === "zh" ? "zh" : "wide";
 
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-[#C8A96A]/18 bg-[#101010]/94 backdrop-blur">
-        <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-[72px] max-w-[1760px] items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
           <Link href={localizePath("/", locale)} className="flex shrink-0 items-center gap-3 whitespace-nowrap" onClick={() => setOpen(false)}>
             <span
               className="relative flex size-10 shrink-0 items-center justify-center rounded-md border border-[#C8A96A]/55 bg-[#C8A96A]/10 text-[#C8A96A] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]"
@@ -135,13 +136,16 @@ export function Header() {
             <span className="luxury-wordmark whitespace-nowrap text-2xl font-semibold leading-none text-[#C8A96A] sm:text-3xl">
               仙丽科技
             </span>
-            <span className="hidden h-5 w-px bg-[#C8A96A]/42 2xl:block" aria-hidden="true" />
-            <span className="hidden whitespace-nowrap text-[10px] font-medium tracking-[0.08em] text-[#DAD3C5] 2xl:block">
+            <span className={`xianli-header-tagline xianli-header-tagline-${desktopMode} h-5 w-px bg-[#C8A96A]/42`} aria-hidden="true" />
+            <span className={`xianli-header-tagline xianli-header-tagline-${desktopMode} whitespace-nowrap text-[10px] font-medium tracking-[0.08em] text-[#DAD3C5]`}>
               彩卡特种纸供应链专业服务商
             </span>
           </Link>
 
-          <nav className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 2xl:flex" aria-label="主导航">
+          <nav
+            className={`xianli-header-desktop xianli-header-desktop-${desktopMode} min-w-0 flex-1 items-center justify-center gap-0.5 overflow-hidden`}
+            aria-label="主导航"
+          >
             {navigationItems.map((item) => (
               <Link
                 key={item.href}
@@ -157,7 +161,7 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden shrink-0 items-center gap-3 2xl:flex">
+          <div className={`xianli-header-desktop xianli-header-desktop-${desktopMode} shrink-0 items-center gap-3`}>
             <LanguageLinks locale={locale} currentPath={currentPath} />
             <Link
               href={localizePath("/channel-partners", locale)}
@@ -172,14 +176,14 @@ export function Header() {
             aria-label={open ? "关闭导航" : "打开导航"}
             aria-expanded={open}
             onClick={() => setOpen((value) => !value)}
-            className="inline-flex size-10 items-center justify-center rounded-md border border-[#C8A96A]/25 text-[#C8A96A] transition hover:bg-[#C8A96A]/10 2xl:hidden"
+            className={`xianli-header-toggle xianli-header-toggle-${desktopMode} size-10 items-center justify-center rounded-md border border-[#C8A96A]/25 text-[#C8A96A] transition hover:bg-[#C8A96A]/10`}
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
         </div>
 
         <div
-          className={`border-t border-[#C8A96A]/20 bg-[#101010] transition-all duration-200 2xl:hidden ${
+          className={`xianli-header-mobile-panel xianli-header-mobile-panel-${desktopMode} border-t border-[#C8A96A]/20 bg-[#101010] transition-all duration-200 ${
             open
               ? "max-h-[calc(100dvh-72px)] overflow-y-auto overscroll-contain opacity-100"
               : "max-h-0 overflow-hidden opacity-0"

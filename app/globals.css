@@ -209,6 +209,38 @@ textarea:focus {
   background: linear-gradient(90deg, transparent, rgba(200, 169, 106, 0.76), transparent);
 }
 
+.xianli-header-desktop,
+.xianli-header-tagline {
+  display: none;
+}
+
+.xianli-header-toggle {
+  display: inline-flex;
+}
+
+@media (min-width: 1536px) {
+  .xianli-header-desktop-zh {
+    display: flex;
+  }
+
+  .xianli-header-mobile-panel-zh,
+  .xianli-header-toggle-zh {
+    display: none;
+  }
+}
+
+@media (min-width: 1800px) {
+  .xianli-header-desktop-wide,
+  .xianli-header-tagline-zh {
+    display: flex;
+  }
+
+  .xianli-header-mobile-panel-wide,
+  .xianli-header-toggle-wide {
+    display: none;
+  }
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;
